@@ -7,7 +7,7 @@ export function NavBar() {
             <a className="flex-shrink-0" href="/">
               <img
                 className="h-7 w-8"
-                src="/icons/diamond-icon.svg"
+                src="/icons/diamond.svg"
                 alt="Workflow"
               />
             </a>

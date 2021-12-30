@@ -3,9 +3,8 @@ TODO:
 
 BUGS:
 [] NavBar
-    - shadow not working
-    - sticky not working
-    - links don't hide on small screens
+    - hero shows through
+    - links don't hide on small screens, menu doesn't work
 
 
 # Getting Started with Create React App
