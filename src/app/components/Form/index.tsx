@@ -1,6 +1,6 @@
 export function Form() {
   return (
-    <body className="bg-gray-800 text-gray-100 px-8 py-12">
+    <div id="contactus" className="bg-gray-800 text-gray-100 px-8 py-12">
       <div className="text-center w-full">
         <h1 className="text-5xl font-bold"> Contact Us </h1>
       </div>
@@ -8,10 +8,10 @@ export function Form() {
         <div className="flex flex-col gap-8 mr-2 justify-between">
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
-              Lets talk about your next project!
+              Let's talk about your next project!
             </h2>
             <div className="text-gray-700 mt-8">
-              Hate forms? Send us an <span className="underline">email</span>{" "}
+              Hate forms? Send us an <span className="underline"><a href = "mailto: DiamondFinishes2@gmail.com?subject=NewInquiryFromWebsite">email</a></span>{" "}
               instead.
             </div>
           </div>
@@ -56,6 +56,6 @@ export function Form() {
           </div>
         </div>
       </div>
-    </body>
+    </div>
   );
 }

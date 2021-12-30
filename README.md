@@ -1,10 +1,18 @@
-TODO:
-[]
+# TODO:
+[ ] hook up contact form
+[ ] portfolio page
+[ ] contact page
+[ ] make responsive (mostly done, just some small issues to fix)
+[ ] fix bugs
+[ ] deploy
 
-BUGS:
-[] NavBar
+# BUGS:
+[ ] NavBar
     - hero shows through
     - links don't hide on small screens, menu doesn't work
+[ ] Hero
+    - smooth scroll on button click
+[ ] 
 
 
 # Getting Started with Create React App
