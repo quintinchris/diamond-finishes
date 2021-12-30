@@ -1,3 +1,13 @@
+TODO:
+[]
+
+BUGS:
+[] NavBar
+    - shadow not working
+    - sticky not working
+    - links don't hide on small screens
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
