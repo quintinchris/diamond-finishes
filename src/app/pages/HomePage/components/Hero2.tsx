@@ -1,9 +1,8 @@
 export function Hero2() {
   return (
-    <div className="bg-white dark:bg-gray-800 overflow-hidden lg:flex lg:items-center">
+    <div className="bg-white dark:bg-gray-800 overflow-hidden h-screen lg:flex lg:items-center">
       <div className="w-full py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
         <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
-            {/* TODO: Make this font bigger */}
           <span className="block text-5xl">Making Your Dream Projects A Reality</span>
         </h2>
         <p className="text-md mt-4 text-gray-400">
@@ -20,7 +19,7 @@ export function Hero2() {
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-8 p-8 lg:p-24 w-11/12">
+      <div className="flex items-center gap-8 pr-8 w-11/12">
         <img
           src="/images/IMG-0350.jpg"
           className="rounded-lg w-1/2"

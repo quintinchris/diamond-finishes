@@ -6,7 +6,7 @@ export function Team() {
         Our team
       </p>
       <p className="text-center mb-32 text-xl font-normal text-gray-500">
-        Meat the best team in wolrd
+        Meet the best team in the world
       </p>
       <div className="flex items-center space-y-24 md:space-y-0 flex-col md:flex-row justify-evenly">
         <div className="p-4 relative">
@@ -47,7 +47,7 @@ export function Team() {
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow px-8 py-4 pt-24">
             <div className="text-center">
               <p className="text-2xl text-gray-800 dark:text-white">
-                Cameron LASTNAME
+                Cameron Foster
               </p>
               <p className="text-xl text-gray-500 dark:text-gray-200 font-light">
                 Founder &amp; Carpenter
