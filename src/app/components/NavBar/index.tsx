@@ -1,6 +1,6 @@
 export function NavBar() {
   return (
-    <nav className="sticky top-0 shadow-lg bg-white dark:bg-gray-800 backdrop-filter backdrop-blur-lg bg-opacity-30 border-b-2 border-red-900 z-50">
+    <nav className="sticky top-0 shadow-lg bg-white dark:bg-gray-800 backdrop-filter backdrop-blur-lg bg-opacity-30 border-b-2 border-slate-300 z-50">
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex items-center justify-between h-16">
           <div className="w-full justify-between flex items-center">
