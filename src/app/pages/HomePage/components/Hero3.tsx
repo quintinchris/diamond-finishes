@@ -12,9 +12,10 @@ export function Hero3() {
         />
       </div>
       <div className="w-3/4 h-screen pt-16 px-4 sm:px-6 lg:px-0 text-center">
-        <h2 className="font-sans font-semibold text-black dark:text-white sm:text-4xl">
-          <span className="block text-6xl leading-tight">
-            Making Your Dream Projects A Reality
+        <h2 className="font-['Poppins'] font-semibold text-black dark:text-white sm:text-4xl">
+          <span className="block text-5xl leading-tight">
+            {/* Making Your Dream Projects A Reality */}
+            We bring your ideas to life
           </span>
         </h2>
         <p className="text-md mt-4 text-slate-800">
@@ -26,7 +27,7 @@ export function Hero3() {
             <button
               type="button"
               onClick={() => scrollToElement("#contactus")}
-              className="py-2 px-4 bg-red-900 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+              className="py-2 px-4 bg-red-900 hover:bg-red-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
             >
               Contact Us
             </button>
