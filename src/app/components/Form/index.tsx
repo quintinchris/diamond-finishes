@@ -1,6 +1,6 @@
 export function Form() {
   return (
-    <div id="contactus" className="bg-gray-800 text-gray-100 px-8 py-12">
+    <div id="contactus" className="bg-slate-600 text-gray-100 px-8 py-12">
       <div className="text-center w-full">
         <h1 className="text-5xl font-bold"> Contact Us </h1>
       </div>
@@ -50,7 +50,7 @@ export function Form() {
             <textarea className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
           </div>
           <div className="mt-8">
-            <button className="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+            <button className="uppercase text-sm font-bold tracking-wide bg-red-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:bg-red-700">
               Send Message
             </button>
           </div>

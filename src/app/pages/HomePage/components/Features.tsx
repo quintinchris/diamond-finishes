@@ -1,6 +1,6 @@
 export function Features() {
   return (
-    <div className="container mx-auto px-6 p-6 bg-white dark:bg-gray-800">
+    <div className="mx-auto px-6 p-6 bg-slate-400 w-full dark:bg-gray-800">
       <div className="mb-16 text-center">
         <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
           Our Services
@@ -11,8 +11,8 @@ export function Features() {
       </div>
       <div className="flex flex-wrap my-12 dark:text-white">
         <div className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 p-8">
-          <div className="flex items-center mb-6">
-            <img src="/icons/floor.svg" className="h-7 w-7" alt="Floor Icon" />
+          <div className="flex items-center mb-2">
+            <img src="/icons/floor.svg" className="h-10 w-10" alt="Floor Icon" />
             <div className="ml-4 text-xl">Flooring</div>
           </div>
           <p className="leading-loose text-gray-500 dark:text-gray-200 text-md">

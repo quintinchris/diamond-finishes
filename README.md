@@ -2,6 +2,7 @@
 [ ] hook up contact form
 [ ] portfolio page
 [ ] contact page
+[ ] FAQ page?
 [ ] make responsive (mostly done, just some small issues to fix)
 [ ] fix bugs
 [ ] deploy

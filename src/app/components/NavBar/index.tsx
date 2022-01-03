@@ -1,6 +1,6 @@
 export function NavBar() {
   return (
-    <nav className="sticky top-0 shadow-lg bg-white dark:bg-gray-800">
+    <nav className="sticky top-0 shadow-lg bg-white dark:bg-gray-800 backdrop-filter backdrop-blur-lg bg-opacity-30 border-b-2 border-red-900 z-50">
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex items-center justify-between h-16">
           <div className="w-full justify-between flex items-center">
@@ -33,9 +33,6 @@ export function NavBar() {
                 </a>
               </div>
             </div>
-          </div>
-          <div className="block">
-            <div className="ml-4 flex items-center md:ml-6"></div>
           </div>
           <div className="-mr-2 flex md:hidden">
             <button className="text-gray-800 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
