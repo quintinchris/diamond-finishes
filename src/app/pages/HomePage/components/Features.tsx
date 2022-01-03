@@ -1,6 +1,6 @@
 export function Features() {
   return (
-    <div className="mx-auto px-6 p-6 bg-slate-400 w-full dark:bg-gray-800">
+    <div className="mx-auto px-6 p-6 bg-slate-100 w-full dark:bg-gray-800">
       <div className="mb-16 text-center">
         <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
           Our Services

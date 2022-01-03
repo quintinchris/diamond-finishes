@@ -1,13 +1,13 @@
 export function NavBar() {
   return (
-    <nav className="sticky top-0 shadow-lg bg-white dark:bg-gray-800 backdrop-filter backdrop-blur-lg bg-opacity-30 border-b-2 border-slate-300 z-50">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav className="sticky top-0 shadow-lg bg-white dark:bg-gray-800 backdrop-blur-xl bg-opacity-30 border-b border-slate-500 z-50">
+      <div className="max-w-7xl mx-auto pl-6 pr-4">
+        <div className="flex items-center justify-between h-14">
           <div className="w-full justify-between flex items-center">
             <a className="flex-shrink-0" href="/">
               <img
                 className="h-7 w-8"
-                src="/icons/diamond.svg"
+                src="/icons/diamond-gray.svg"
                 alt="Workflow"
               />
             </a>
