@@ -1,13 +1,13 @@
 export function NavBar() {
   return (
-    <nav className="sticky top-0 shadow-lg bg-white dark:bg-gray-800 backdrop-blur-xl bg-opacity-30 border-b border-slate-500 z-50">
+    <header className="sticky top-0 bg-white z-10 backdrop-filter backdrop-blur-lg bg-opacity-30 firefox:bg-opacity-90">
       <div className="max-w-7xl mx-auto pl-6 pr-4">
         <div className="flex items-center justify-between h-14">
           <div className="w-full justify-between flex items-center">
             <a className="flex-shrink-0" href="/">
               <img
                 className="h-7 w-8"
-                src="/icons/diamond-gray.svg"
+                src="/icons/diamond.svg"
                 alt="Workflow"
               />
             </a>
@@ -78,6 +78,6 @@ export function NavBar() {
           </a>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
