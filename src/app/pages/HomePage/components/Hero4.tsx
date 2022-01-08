@@ -5,19 +5,22 @@ export function Hero4() {
   return (
     // gradient background
     // <div className="bg-gradient-to-r bg-blur-sm from-maroon/90 via-maroon to-maroon/90 dark:bg-gray-800 overflow-hidden h-screen flex">
-    <div className="bg-maroon dark:bg-gray-800 relative overflow-hidden h-screen z-0">
+    <div className="bg-gray-600 dark:bg-gray-800 relative overflow-hidden h-screen z-0">
       <img className="absolute place-self-center max-h-screen w-full" src="/icons/diamond-3.svg" alt="Workflow" />
-      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pt-12 pl-4 w-2/5">
+      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pt-24 pl-4 w-2/5">
         <h2 className="font-['Poppins'] font-semibold text-white dark:text-white sm:text-4xl">
-          <span className="block text-5xl leading-tight">
-            Bring your ideas to life with Diamond Finishes
+          <span className="block text-6xl leading-tight">
+            Bring your ideas to life
+            {/* Make Your Home Shine */}
           </span>
+          {/* <span className="block text-3xl pt-2">
+            With Diamond Finishes
+          </span> */}
         </h2>
         <p className="text-md mt-4 text-slate-200">
           Providing Quality Carpentry Services In &amp; Around Historic New
           Castle, DE.
         </p>
-        <div className="lg:mt-0 lg:flex-shrink-0">
           <div className="mt-12 inline-flex rounded-md shadow">
             <button
               type="button"
@@ -27,7 +30,6 @@ export function Hero4() {
               Contact Us
             </button>
           </div>
-        </div>
       </div>
     </div>
   );

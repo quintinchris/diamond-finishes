@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "maroon": "#510400",
+        "maroon": "#450000",
+        "df-gray": "#333333",
       }
     },
   },

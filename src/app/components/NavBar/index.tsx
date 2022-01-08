@@ -4,12 +4,15 @@ export function NavBar() {
       <div className="max-w-7xl mx-auto pl-6 pr-4">
         <div className="flex items-center justify-between h-10">
           <div className="w-full justify-between flex items-center">
-            <a className="flex-shrink-0" href="/">
+            <a className="flex flex-shrink-0 justify-between" href="/">
               <img
                 className="h-7 w-8"
                 src="/icons/diamond.svg"
                 alt="Workflow"
               />
+              <span className="pl-2 my-auto font-['Poppins'] font-semibold text-black">
+                Diamond Finishes
+              </span>
             </a>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
