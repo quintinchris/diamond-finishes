@@ -2,7 +2,7 @@ export function NavBar() {
   return (
     <header className="sticky top-0 bg-white z-10 backdrop-filter backdrop-blur-lg bg-opacity-30 firefox:bg-opacity-90">
       <div className="max-w-7xl mx-auto pl-6 pr-4">
-        <div className="flex items-center justify-between h-14">
+        <div className="flex items-center justify-between h-10">
           <div className="w-full justify-between flex items-center">
             <a className="flex-shrink-0" href="/">
               <img

@@ -6,8 +6,8 @@ export function Hero4() {
     // gradient background
     // <div className="bg-gradient-to-r bg-blur-sm from-maroon/90 via-maroon to-maroon/90 dark:bg-gray-800 overflow-hidden h-screen flex">
     <div className="bg-maroon dark:bg-gray-800 relative overflow-hidden h-screen z-0">
-      <img className="absolute object-fill mix-blend-multiply bottom-1/4 top-auto" src="/icons/diamond-gray.svg" alt="Workflow" />
-      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pt-12">
+      <img className="absolute place-self-center max-h-screen w-full" src="/icons/diamond-3.svg" alt="Workflow" />
+      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pt-12 pl-4 w-2/5">
         <h2 className="font-['Poppins'] font-semibold text-white dark:text-white sm:text-4xl">
           <span className="block text-5xl leading-tight">
             Bring your ideas to life with Diamond Finishes
