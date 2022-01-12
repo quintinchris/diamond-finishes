@@ -8,11 +8,7 @@
 [ ] deploy
 
 # BUGS:
-[ ] NavBar
-    - hero shows through
-    - links don't hide on small screens, menu doesn't work
-[ ] Hero
-    - smooth scroll on button click
+[ ] smooth scroll
 [ ] 
 
 ## Notes
