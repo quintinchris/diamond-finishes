@@ -1,5 +1,5 @@
 export type EmailTemplateParams = {
-  from_name: string;
-  from_email: string;
+  name: string;
+  contact: string;
   message: string;
 };

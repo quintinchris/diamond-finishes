@@ -1,5 +1,4 @@
-const webpack = require('webpack');
-const path = require('path');
+import { resolve } from 'path';
 
 const config = {
     entry: [
@@ -7,7 +6,7 @@ const config = {
         './src/index.tsx'
     ],
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
     module: {
@@ -58,4 +57,4 @@ const config = {
     }
 };
 
-module.exports = config;
+export default config;

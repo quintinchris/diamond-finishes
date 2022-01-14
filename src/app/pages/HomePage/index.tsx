@@ -5,7 +5,7 @@ import { Hero4 } from './components/Hero4';
 import { Features } from './components/Features';
 import { Team } from './components/Team';
 import { Testimonials } from './components/Testimonials';
-import { Form } from '../../components/Form';
+import { Form } from '../../components/Form/Form';
 
 
 export function HomePage() {
