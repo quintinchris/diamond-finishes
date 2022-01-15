@@ -1,12 +1,12 @@
 import { Footer } from "../../components/Footer/Footer";
-import { Form } from "../../components/Form/Form";
+import { ContactForm } from "./components/ContactForm";
 import { NavBar } from "../../components/NavBar/NavBar";
 
 export function Contact() {
     return (
         <>
         <NavBar />
-        <Form />
+        <ContactForm />
         <Footer />
         </>
     )

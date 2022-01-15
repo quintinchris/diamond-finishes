@@ -26,7 +26,7 @@ export function NavBar() {
                   className="text-black  hover:text-gray-500 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   href="/portfolio"
                 >
-                  Gallery
+                  Portfolio
                 </a>
                 <a
                   className="text-black  hover:text-gray-500 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
