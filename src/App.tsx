@@ -5,11 +5,12 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from "react-router-dom";import { useTranslation } from 'react-i18next';
 
 import "./App.css";
 import { HomePage } from "./app/pages/HomePage";
+import { Portfolio } from "./app/pages/Portfolio";
+import { Contact } from "./app/pages/Contact";
 
 function App() {
   const { i18n } = useTranslation();
@@ -25,7 +26,8 @@ function App() {
 
       <Routes>
         <Route path={process.env.PUBLIC_URL + "/"} element={<HomePage />} />
-        {/* TODO: ADD ROUTES TO PORTFOLIO AND CONTACT PAGES */}
+        <Route path={process.env.PUBLIC_URL + "/portfolio"} element={<Portfolio />} />
+        <Route path={process.env.PUBLIC_URL + "/contact"} element={<Contact />} />
       </Routes>
       {/* <GlobalStyle /> */}
     </Router>

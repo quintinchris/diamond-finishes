@@ -18,19 +18,19 @@ export function NavBar() {
               <div className="ml-10 flex items-baseline space-x-4">
                 <a
                   className="text-black  hover:text-gray-500 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  href="/#"
+                  href="/"
                 >
                   Home
                 </a>
                 <a
                   className="text-black  hover:text-gray-500 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  href="/#"
+                  href="/portfolio"
                 >
                   Gallery
                 </a>
                 <a
                   className="text-black  hover:text-gray-500 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  href="/#"
+                  href="/contact"
                 >
                   Contact
                 </a>
