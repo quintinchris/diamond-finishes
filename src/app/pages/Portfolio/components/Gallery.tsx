@@ -48,54 +48,39 @@ export function Gallery() {
               src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1100&amp;q=80"
               alt=""
             />
-            <div className="flex flex-wrap -mx-5">
-              <div className="w-full lg:w-4/5 px-5 mb-6 lg:mb-0">
-                <div className="relative py-12 px-10 lg:px-20 bg-gray-600 rounded-xl">
-                  <div
-                    className="absolute top-0 -mt-6 left-0 ml-16 w-14 h-14 bg-gray-600"
-                    // style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);"
-                  ></div>
-                  <h3 className="mb-6 text-4xl text-white font-bold font-heading">
-                    Experience design for your products
-                  </h3>
-                  <p className="text-lg text-gray-300">
-                    The brown fox jumps over the lazy dog.
-                  </p>
-                </div>
-              </div>
-              <div className="w-auto mx-auto lg:w-1/5 px-5">
-                <button className="inline-flex mr-2 items-center justify-center w-14 h-14 bg-blue-500 hover:bg-blue-600 rounded-full">
-                  <svg
-                    className="w-4 h-4"
-                    width="7"
-                    height="13"
-                    viewBox="0 0 7 13"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.84708 12.1077C7.05097 12.3133 7.05097 12.6436 6.84708 12.8476C6.64319 13.0517 6.31377 13.0525 6.10988 12.8476L0.152917 6.8708C-0.0509739 6.66673 -0.0509738 6.33645 0.152917 6.13087L6.10988 0.154027C6.31377 -0.0500387 6.64319 -0.0500386 6.84708 0.154027C7.05098 0.358848 7.05098 0.689887 6.84708 0.893952L1.4143 6.50121L6.84708 12.1077Z"
-                      fill="white"
-                    ></path>
-                  </svg>
-                </button>
-                <button className="inline-flex items-center justify-center w-14 h-14 bg-blue-500 hover:bg-blue-600 rounded-full">
-                  <svg
-                    className="w-4 h-4"
-                    width="7"
-                    height="13"
-                    viewBox="0 0 7 13"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0.152917 0.894235C-0.0509742 0.688658 -0.0509742 0.358375 0.152917 0.15431C0.356808 -0.0497557 0.686228 -0.0505119 0.89012 0.15431L6.84708 6.13116C7.05097 6.33522 7.05097 6.6655 6.84708 6.87108L0.890119 12.8479C0.686227 13.052 0.356807 13.052 0.152916 12.8479C-0.0509753 12.6431 -0.0509753 12.3121 0.152916 12.108L5.5857 6.50074L0.152917 0.894235Z"
-                      fill="white"
-                    ></path>
-                  </svg>
-                </button>
+          </div>
+        </div>
+        <div className="w-full">
+          <div className="mx-auto px-5 flex content-center justify-center items-center">
+            <button className="inline-flex mr-2 items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 active:bg-gray-200">
+              <svg
+                width="9"
+                fill="currentColor"
+                height="8"
+                className=""
+                viewBox="0 0 1792 1792"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M1427 301l-531 531 531 531q19 19 19 45t-19 45l-166 166q-19 19-45 19t-45-19l-742-742q-19-19-19-45t19-45l742-742q19-19 45-19t45 19l166 166q19 19 19 45t-19 45z"></path>
+              </svg>
+            </button>
+            <div className="rounded-lg w-72 p-4 m-auto">
+              <div className="w-full h-2 bg-gray-400 rounded-full">
+                <div className="w-1/4 h-full text-center text-xs text-white bg-green-500 rounded-full"></div>
               </div>
             </div>
+            <button className="inline-flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 active:bg-gray-200">
+              <svg
+                width="9"
+                fill="currentColor"
+                height="8"
+                className=""
+                viewBox="0 0 1792 1792"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"></path>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
