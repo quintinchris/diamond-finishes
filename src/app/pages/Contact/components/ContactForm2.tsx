@@ -31,19 +31,21 @@ export function ContactForm() {
     const imageUrl = isFilePicked ? callImageApiWithFile(selectedFile) : null;
     const emailMessage = imageUrl
       ? message + `\n\nSee Images at: ${imageUrl}`
-      : null;
+      : message;
+
+    // TODO: add validation
+    // emailMessage === "" ?? alert("Please enter a message");
+
     const params: EmailTemplateParams = {
       name,
       contact,
-      message: emailMessage ?? message,
+      message: emailMessage,
     };
 
     sendEmail(params);
     e.preventDefault();
     alert(
-      `Submitting Name ${name}, contact ${contact}, message ${
-        emailMessage ?? message
-      }`
+      `Submitting Name ${name}, contact ${contact}, message ${emailMessage}`
     );
     resetName();
     resetContact();
@@ -63,7 +65,7 @@ export function ContactForm() {
               hours.
             </div>
             <div className="text-center text-white mt-16">
-              <div className="flex flex-row px-4 py-6 w-3/4 items-center content-center justify-start text-center rounded-lg hover:bg-maroon3 hover:border-2 hover:border-white cursor-pointer">
+              <div className="flex flex-row hover:box-border px-4 py-6 w-3/4 items-center content-center justify-start text-center rounded-lg hover:bg-maroon3 hover:border-2 hover:border-white cursor-pointer">
                 <img
                   src="/icons/phone.svg"
                   alt="phone"
@@ -71,7 +73,7 @@ export function ContactForm() {
                 />
                 <span>+1 302-504-5409</span>
               </div>
-              <div className="mt-2 px-4 py-6 w-3/4 text-center rounded-lg hover:border-2 hover:border-white hover:bg-maroon3 cursor-pointer">
+              <div className="hover:box-border mt-2 px-4 py-6 w-3/4 text-center rounded-lg hover:border-2 hover:border-white hover:bg-maroon3 cursor-pointer">
                 <a
                   className="flex flex-row items-center content-center justify-start"
                   href="mailto: DiamondFinishes2@gmail.com?subject=NewInquiryFromWebsite"
@@ -124,19 +126,19 @@ export function ContactForm() {
             </div>
             <div className="mt-8 flex flex-row">
               <div
-                className="rounded-full bg-gray-800 hover:bg-slate-900 px-4 py-1 w-1/2 overflow:hidden cursor-pointer"
+                className="rounded-full bg-gray-800 hover:bg-slate-900 px-4 py-1 w-1/2 overflow:hidden"
               >
                 <input
-                  className="opacity-0 z-0 absolute place-self-center cursor-pointer"
+                  className="cursor-pointer z-0 opacity-0 absolute place-self-center"
                   type="file"
                   name="file"
                   onChange={selectImage}
                 />
-                <div className="flex flex-row items-center content-center justify-start cursor-pointer">
+                <div className="flex flex-row items-center content-center justify-start cursor-pointer z-10">
                   <img
                     src="/icons/upload.svg"
                     alt="upload"
-                    className="w-10 h-10 pr-4"
+                    className="w-10 h-10 pr-4 cursor-pointer"
                   />
                   <span className="text-white font-['Poppins'] text-sm cursor-pointer">
                     Upload Image
@@ -156,7 +158,7 @@ export function ContactForm() {
                 type="submit"
                 className="uppercase text-sm font-bold tracking-wide bg-red-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:bg-red-700"
               >
-                Send Message
+                Send Message!
               </button>
             </div>
           </form>
