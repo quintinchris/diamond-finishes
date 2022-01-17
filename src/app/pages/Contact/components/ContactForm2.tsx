@@ -4,6 +4,7 @@ import {
   EmailTemplateParams,
   useInput,
   callImageApi,
+  callImageApiWithFile,
 } from "../../../utils";
 
 export function ContactForm() {
@@ -31,12 +32,7 @@ export function ContactForm() {
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    const reader = new FileReader();
-    reader.onloadend = function () {
-      console.log("RESULT", reader.result);
-    };
-    const uploadedImage = reader.readAsDataURL(selectedFile ?? new Blob());
-    const imageUrl = isFilePicked ? callImageApi(uploadedImage) : null;
+    const imageUrl = isFilePicked ? callImageApiWithFile(selectedFile) : null;
     const emailMessage = imageUrl ? message + `\n\nSee Images at: ${imageUrl}` : null;
     const params: EmailTemplateParams = {
       name,
