@@ -1,11 +1,12 @@
-import { ApiCallParams, envConfig } from "../utils";
+import { envConfig } from "../utils";
 
 export const callApi = async (params: any) => {
   const { url, body, query, method } = params;
   const headers = new Headers();
+  const requestUrl = `${url}?${query}`;
   headers.append("Content-Type", "application/json");
   headers.append("Accept", "application/json");
-  const request = new Request(url, {
+  const request = new Request(requestUrl, {
     method,
     body: body ? JSON.stringify(body) : undefined,
     headers,
