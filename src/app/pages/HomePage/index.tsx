@@ -8,6 +8,7 @@ import { Testimonials } from './components/Testimonials';
 import { Form } from '../../components/Form/Form';
 import { NavBar } from "../../components/NavBar/NavBar";
 import { Footer } from "../../components/Footer/Footer";
+import { ContactForm } from '../Contact/components/ContactForm';
 
 
 export function HomePage() {
@@ -18,7 +19,7 @@ export function HomePage() {
         <Features />
         <Team />
         <Testimonials />
-        <Form />
+        <ContactForm />
         <Footer />
         </>
     )

@@ -4,10 +4,10 @@ export function Gallery() {
       <div className="relative mx-4 my-4 pt-12 bg-white shadow-md rounded-lg">
        <div className="">
         <div className="text-center mb-14 lg:mb-28">
-          <span className="text-8xl text-black font-['Ubuntu'] font-heading font-extrabold">
+          <span className="text-6xl text-black font-['Poppins'] font-heading font-extrabold">
             Portfolio
           </span>
-          <div className="font-['Poppins'] text-black place-items-center mt-12 px-2 mx-12 py-4 bg-gray-200 rounded-full">
+          <div className="font-['Poppins'] text-black place-items-center mt-12 mx-24 py-4 bg-gray-200 rounded-full">
             <button className="font-medium px-6 py-4 mx-2 text-sm text-gray-700 rounded-xl bg-transparent hover:bg-white active:bg-grey-600 focus:bg-white focus:drop-shadow-md whitespace-nowrap">
               Flooring
             </button>
@@ -51,7 +51,7 @@ export function Gallery() {
             />
           </div>
         </div>
-        <div className="w-full">
+        <div className="w-full pb-6">
           <div className="mx-auto px-5 w-3/4 flex content-center justify-center items-center">
             <button className="inline-flex mr-2 items-center justify-center w-10 h-12 rounded-full hover:bg-gray-100 active:bg-gray-200">
               <svg

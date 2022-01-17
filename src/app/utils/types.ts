@@ -3,3 +3,10 @@ export type EmailTemplateParams = {
   contact: string;
   message: string;
 };
+
+export type ApiCallParams = {
+  url: string;
+  body?: string;
+  query?: string;
+  method?: string;
+}
