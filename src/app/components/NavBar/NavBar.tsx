@@ -8,7 +8,7 @@ export function NavBar() {
               <img
                 className="h-7 w-8"
                 src="/icons/diamond.svg"
-                alt="Workflow"
+                alt="Diamond"
               />
               <span className="pl-2 my-auto font-['Poppins'] font-semibold text-black">
                 Diamond Finishes
