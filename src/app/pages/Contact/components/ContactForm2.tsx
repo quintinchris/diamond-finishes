@@ -8,11 +8,7 @@ import {
 } from "../../../utils";
 
 export function ContactForm() {
-  const { 
-      value: name, 
-      bind: bindName, 
-      reset: resetName 
-  } = useInput("");
+  const { value: name, bind: bindName, reset: resetName } = useInput("");
   const {
     value: contact,
     bind: bindContact,
@@ -23,7 +19,7 @@ export function ContactForm() {
     bind: bindMessage,
     reset: resetMessage,
   } = useInput("");
-  const [selectedFile, setSelectedFile] = useState();
+  const [selectedFile, setSelectedFile] = useState<any>();
   const [isFilePicked, setIsFilePicked] = useState(false);
 
   const selectImage = (event: any) => {
@@ -33,7 +29,9 @@ export function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     const imageUrl = isFilePicked ? callImageApiWithFile(selectedFile) : null;
-    const emailMessage = imageUrl ? message + `\n\nSee Images at: ${imageUrl}` : null;
+    const emailMessage = imageUrl
+      ? message + `\n\nSee Images at: ${imageUrl}`
+      : null;
     const params: EmailTemplateParams = {
       name,
       contact,
@@ -60,11 +58,12 @@ export function ContactForm() {
             <h2 className="text-4xl lg:text-5xl text-white font-['Poppins'] font-bold leading-tight">
               Get a quote
             </h2>
-            <div className="text-gray-300 mt-8 w-5/6">
-              Fill out the form and our team will get back to you within 24 hours.
+            <div className="text-gray-200 mt-8 w-5/6">
+              Fill out the form and our team will get back to you within 24
+              hours.
             </div>
             <div className="text-center text-white mt-16">
-               <div className="flex flex-row px-4 py-6 w-3/4 items-center content-center justify-start text-center rounded-lg hover:bg-maroon3 hover:border-2 hover:border-white cursor-pointer">
+              <div className="flex flex-row px-4 py-6 w-3/4 items-center content-center justify-start text-center rounded-lg hover:bg-maroon3 hover:border-2 hover:border-white cursor-pointer">
                 <img
                   src="/icons/phone.svg"
                   alt="phone"
@@ -73,13 +72,16 @@ export function ContactForm() {
                 <span>+1 302-504-5409</span>
               </div>
               <div className="mt-2 px-4 py-6 w-3/4 text-center rounded-lg hover:border-2 hover:border-white hover:bg-maroon3 cursor-pointer">
-               <a className="flex flex-row items-center content-center justify-start" href="mailto: DiamondFinishes2@gmail.com?subject=NewInquiryFromWebsite">
-                <img
-                  src="/icons/envelope.svg"
-                  alt="envelope"
-                  className="w-10 h-10 pr-4 fill-white"
-                />
-                <span>diamondfinishes2@gmail.com</span>
+                <a
+                  className="flex flex-row items-center content-center justify-start"
+                  href="mailto: DiamondFinishes2@gmail.com?subject=NewInquiryFromWebsite"
+                >
+                  <img
+                    src="/icons/envelope.svg"
+                    alt="envelope"
+                    className="w-10 h-10 pr-4 fill-white"
+                  />
+                  <span>diamondfinishes2@gmail.com</span>
                 </a>
               </div>
             </div>
@@ -120,13 +122,42 @@ export function ContactForm() {
                 className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               ></textarea>
             </div>
-            <div className="mt-8">
-              <button className="uppercase text-sm font-bold tracking-wide bg-red-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:bg-red-700">
-                Send Message
-              </button>
+            <div className="mt-8 flex flex-row">
+              <div
+                className="rounded-full bg-gray-800 hover:bg-slate-900 px-4 py-1 w-1/2 overflow:hidden cursor-pointer"
+              >
+                <input
+                  className="opacity-0 z-0 absolute place-self-center cursor-pointer"
+                  type="file"
+                  name="file"
+                  onChange={selectImage}
+                />
+                <div className="flex flex-row items-center content-center justify-start cursor-pointer">
+                  <img
+                    src="/icons/upload.svg"
+                    alt="upload"
+                    className="w-10 h-10 pr-4"
+                  />
+                  <span className="text-white font-['Poppins'] text-sm cursor-pointer">
+                    Upload Image
+                  </span>
+                </div>
+              </div>
+              { isFilePicked ? (
+				<div className="pl-6 w-1/2 text-center place-self-center font-['Poppins']">
+					<p>Filename: {selectedFile?.name}</p>
+				</div>
+			) : (
+                <div></div>
+            )}
             </div>
             <div className="mt-8">
-              <input type="file" name="file" onChange={selectImage} />
+              <button
+                type="submit"
+                className="uppercase text-sm font-bold tracking-wide bg-red-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:bg-red-700"
+              >
+                Send Message
+              </button>
             </div>
           </form>
         </div>
