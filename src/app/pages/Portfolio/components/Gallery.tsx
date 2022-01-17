@@ -1,28 +1,29 @@
 export function Gallery() {
   return (
-    <section className="relative bg-white py-10 2xl:py-40 overflow-hidden">
-      <div className="relative max-w-4xl px-4 lg:px-0 mx-auto py-4">
+    <section className="relative bg-gray-300 overflow-hidden">
+      <div className="relative mx-4 my-4 pt-12 bg-white shadow-md rounded-lg">
+       <div className="">
         <div className="text-center mb-14 lg:mb-28">
-          <span className="text-6xl text-black font-['Poppins'] font-heading font-bold">
-            Our Works
+          <span className="text-8xl text-black font-['Ubuntu'] font-heading font-extrabold">
+            Portfolio
           </span>
-          <div className="font-['Poppins'] text-black place-items-center mt-12 px-2 py-4 bg-gray-200 rounded-full">
-            <button className="font-medium px-6 py-4 mx-2 text-sm text-gray-700 rounded-lg bg-transparent hover:bg-white active:bg-grey-600 focus:bg-white focus:drop-shadow-md whitespace-nowrap">
+          <div className="font-['Poppins'] text-black place-items-center mt-12 px-2 mx-12 py-4 bg-gray-200 rounded-full">
+            <button className="font-medium px-6 py-4 mx-2 text-sm text-gray-700 rounded-xl bg-transparent hover:bg-white active:bg-grey-600 focus:bg-white focus:drop-shadow-md whitespace-nowrap">
               Flooring
             </button>
-            <button className="font-medium px-6 py-4 mx-2 text-sm text-gray-700 rounded-lg bg-transparent hover:bg-white active:bg-grey-600 focus:bg-white focus:drop-shadow-md whitespace-nowrap">
+            <button className="font-medium px-6 py-4 mx-2 text-sm text-gray-700 rounded-xl bg-transparent hover:bg-white active:bg-grey-600 focus:bg-white focus:drop-shadow-md whitespace-nowrap">
               Roofing
             </button>
-            <button className="font-medium px-6 py-4 mx-2 text-sm text-gray-700 rounded-lg bg-transparent hover:bg-white active:bg-grey-600 focus:bg-white focus:drop-shadow-md whitespace-nowrap">
+            <button className="font-medium px-6 py-4 mx-2 text-sm text-gray-700 rounded-xl bg-transparent hover:bg-white active:bg-grey-600 focus:bg-white focus:drop-shadow-md whitespace-nowrap">
               Woodworking
             </button>
-            <button className="font-medium px-6 py-4 mx-2 text-sm text-gray-700 rounded-lg bg-transparent hover:bg-white active:bg-grey-600 focus:bg-white focus:drop-shadow-md whitespace-nowrap">
+            <button className="font-medium px-6 py-4 mx-2 text-sm text-gray-700 rounded-xl bg-transparent hover:bg-white active:bg-grey-600 focus:bg-white focus:drop-shadow-md whitespace-nowrap">
               Kitchen Reno
             </button>
-            <button className="font-medium px-6 py-4 mx-2 text-sm text-gray-700 rounded-lg bg-transparent hover:bg-white active:bg-grey-600 focus:bg-white focus:drop-shadow-md whitespace-nowrap">
+            <button className="font-medium px-6 py-4 mx-2 text-sm text-gray-700 rounded-xl bg-transparent hover:bg-white active:bg-grey-600 focus:bg-white focus:drop-shadow-md whitespace-nowrap">
               Decks & Fencing
             </button>
-            <button className="font-medium px-6 py-4 mx-2 text-sm text-gray-700 rounded-lg bg-transparent hover:bg-white active:bg-grey-600 focus:bg-white focus:drop-shadow-md whitespace-nowrap">
+            <button className="font-medium px-6 py-4 mx-2 text-sm text-gray-700 rounded-xl bg-transparent hover:bg-white active:bg-grey-600 focus:bg-white focus:drop-shadow-md whitespace-nowrap">
               Other
             </button>
           </div>
@@ -51,12 +52,12 @@ export function Gallery() {
           </div>
         </div>
         <div className="w-full">
-          <div className="mx-auto px-5 flex content-center justify-center items-center">
-            <button className="inline-flex mr-2 items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 active:bg-gray-200">
+          <div className="mx-auto px-5 w-3/4 flex content-center justify-center items-center">
+            <button className="inline-flex mr-2 items-center justify-center w-10 h-12 rounded-full hover:bg-gray-100 active:bg-gray-200">
               <svg
                 width="9"
                 fill="currentColor"
-                height="8"
+                height="28"
                 className=""
                 viewBox="0 0 1792 1792"
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,14 +67,14 @@ export function Gallery() {
             </button>
             <div className="rounded-lg w-72 p-4 m-auto">
               <div className="w-full h-2 bg-gray-400 rounded-full">
-                <div className="w-1/4 h-full text-center text-xs text-white bg-green-500 rounded-full"></div>
+                <div className="w-1/4 h-full text-center text-xs text-white bg-red-800 rounded-full"></div>
               </div>
             </div>
-            <button className="inline-flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 active:bg-gray-200">
+            <button className="inline-flex items-center justify-center w-10 h-12 rounded-full hover:bg-gray-100 active:bg-gray-200">
               <svg
                 width="9"
                 fill="currentColor"
-                height="8"
+                height="28"
                 className=""
                 viewBox="0 0 1792 1792"
                 xmlns="http://www.w3.org/2000/svg"
@@ -83,6 +84,7 @@ export function Gallery() {
             </button>
           </div>
         </div>
+       </div>
       </div>
     </section>
   );

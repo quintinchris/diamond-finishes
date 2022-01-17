@@ -1,30 +1,42 @@
-import { sendEmail } from "../../../utils/sendEmail";
-import { EmailTemplateParams } from "../../../utils/types";
-import { useInput } from "../../../utils/hooks";
+import { useState } from "react";
+import { sendEmail, EmailTemplateParams, useInput, envConfig, callImageApi } from "../../../utils";
 
 export function ContactForm() {
   const { value:name, bind:bindName, reset:resetName } = useInput("");
   const { value:contact, bind:bindContact, reset:resetContact } = useInput("");
   const { value:message, bind:bindMessage, reset:resetMessage } = useInput("");
+  const [selectedFile, setSelectedFile] = useState();
+  const [isFilePicked, setIsFilePicked] = useState(false);
 
+  const selectImage = (event: any) => {
+    setSelectedFile(event.target.files[0]);
+    setIsFilePicked(true);
+};
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    let emailMessage = "";
+    const response = isFilePicked ? callImageApi(selectedFile) : null;
+    response?.then(data => {
+        emailMessage = message + `/n/nSee Images at: ${data.url}`;
+    });
+
     const params: EmailTemplateParams = {
       name,
       contact,
-      message,
+      message: emailMessage ?? message,
     };
+
     sendEmail(params);
     e.preventDefault();
-    alert(`Submitting Name ${name}, contact ${contact}, message ${message}`);
+    alert(`Submitting Name ${name}, contact ${contact}, message ${emailMessage ?? message}`);
     resetName();
     resetContact();
     resetMessage();
   };
 
   return (
-    <div id="contactus" className="bg-slate-600 text-gray-100 px-8 py-12">
-      <div className="max-w-screen-xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
+    <div id="contactus" className="bg-gray-300 text-gray-100 px-8 py-12">
+      <div className="max-w-screen-xl shadow-lg px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
         <div className="flex flex-col gap-8 mr-2 justify-between">
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
@@ -42,9 +54,9 @@ export function ContactForm() {
           </div>
           <div className="mt-8 text-center">
             <img
-              src="/icons/contactus.svg"
+              src="/icons/contact-3.svg"
               alt="contact us"
-              className="w-full"
+              className="w-full -mx-10 -mt-10 p-0"
             />
           </div>
         </div>
