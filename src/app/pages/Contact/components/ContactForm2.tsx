@@ -60,31 +60,33 @@ export function ContactForm() {
             <h2 className="text-4xl lg:text-5xl text-white font-['Poppins'] font-bold leading-tight">
               Get a quote
             </h2>
-            <div className="text-gray-200 mt-8 w-5/6">
+            <div className="text-gray-200 mt-4 w-5/6">
               Fill out the form and our team will get back to you within 24
               hours.
             </div>
             <div className="text-center text-white mt-16">
-              <div className="flex flex-row hover:box-border px-4 py-6 w-3/4 items-center content-center justify-start text-center rounded-lg hover:bg-maroon3 hover:border-2 hover:border-white cursor-pointer">
-                <img
-                  src="/icons/phone.svg"
-                  alt="phone"
-                  className="w-10 h-10 pr-4 fill-white"
-                />
-                <span>+1 302-504-5409</span>
-              </div>
-              <div className="hover:box-border mt-2 px-4 py-6 w-3/4 text-center rounded-lg hover:border-2 hover:border-white hover:bg-maroon3 cursor-pointer">
-                <a
-                  className="flex flex-row items-center content-center justify-start"
-                  href="mailto: DiamondFinishes2@gmail.com?subject=NewInquiryFromWebsite"
-                >
+              <div className="md:[flex flex-row]">
+                <div className="flex flex-row hover:box-border px-4 py-6 w-3/4 items-center content-center justify-start text-center rounded-lg hover:bg-maroon3 hover:border-2 hover:border-white cursor-pointer">
                   <img
-                    src="/icons/envelope.svg"
-                    alt="envelope"
-                    className="w-10 h-10 pr-4 fill-white"
+                    src="/icons/phone.svg"
+                    alt="phone"
+                    className="w-10 h-10 pr-4"
                   />
-                  <span>diamondfinishes2@gmail.com</span>
-                </a>
+                  <span>+1 302-504-5409</span>
+                </div>
+                <div className="hover:box-border mt-2 px-4 py-6 w-3/4 text-center rounded-lg hover:border-2 hover:border-white hover:bg-maroon3 cursor-pointer">
+                  <a
+                    className="flex flex-row items-center content-center justify-start"
+                    href="mailto: DiamondFinishes2@gmail.com?subject=NewInquiryFromWebsite"
+                  >
+                    <img
+                      src="/icons/envelope.svg"
+                      alt="envelope"
+                      className="w-10 h-10 pr-4"
+                    />
+                    <span>diamondfinishes2@gmail.com</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -103,7 +105,7 @@ export function ContactForm() {
                 {...bindName}
               />
             </div>
-            <div className="mt-8">
+            <div className="mt-4">
               <span className="uppercase text-sm text-gray-600 font-bold">
                 Email
               </span>
@@ -114,7 +116,7 @@ export function ContactForm() {
                 {...bindContact}
               />
             </div>
-            <div className="mt-8">
+            <div className="mt-4">
               <span className="uppercase text-sm text-gray-600 font-bold">
                 Message
               </span>
@@ -124,10 +126,8 @@ export function ContactForm() {
                 className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               ></textarea>
             </div>
-            <div className="mt-8 flex flex-row">
-              <div
-                className="rounded-full bg-gray-800 hover:bg-slate-900 px-4 py-1 w-1/2 overflow:hidden"
-              >
+            <div className="mt-4 flex flex-row">
+              <div className="rounded-full bg-gray-800 hover:bg-slate-900 px-4 py-1 w-1/2 overflow:hidden">
                 <input
                   className="cursor-pointer z-0 opacity-0 absolute place-self-center"
                   type="file"
@@ -145,18 +145,18 @@ export function ContactForm() {
                   </span>
                 </div>
               </div>
-              { isFilePicked ? (
-				<div className="pl-6 w-1/2 text-center place-self-center font-['Poppins']">
-					<p>Filename: {selectedFile?.name}</p>
-				</div>
-			) : (
+              {isFilePicked ? (
+                <div className="pl-6 w-1/2 text-center place-self-center font-['Poppins']">
+                  <p>Filename: {selectedFile?.name}</p>
+                </div>
+              ) : (
                 <div></div>
-            )}
+              )}
             </div>
             <div className="mt-8">
               <button
                 type="submit"
-                className="uppercase text-sm font-bold tracking-wide bg-red-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:bg-red-700"
+                className="uppercase text-sm font-bold tracking-wide bg-red-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:bg-maroon"
               >
                 Send Message!
               </button>
