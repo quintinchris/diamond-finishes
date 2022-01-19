@@ -1,7 +1,4 @@
-// import { Hero } from './components/Hero';
-// import { Hero2 } from './components/Hero2';
-// import { Hero3 } from './components/Hero3';
-import { Hero4 } from './components/Hero4';
+import { Hero } from './components/Hero';
 import { Features } from './components/Features';
 import { Team } from './components/Team';
 import { Testimonials } from './components/Testimonials';
@@ -15,7 +12,7 @@ export function HomePage() {
     return (
         <>
         <NavBar />
-        <Hero4 />
+        <Hero />
         <Features />
         <Team />
         <Testimonials />
