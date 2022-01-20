@@ -24,8 +24,8 @@ export function Gallery() {
   };
 
   return (
-    <section className="relative bg-maroon overflow-hidden">
-      <div className="relative mx-4 my-4 pt-12 bg-white shadow-md rounded-lg">
+    <section className="relative bg-maroon overflow-hidden pb-12">
+      <div className="relative mx-6 my-8 pt-12 bg-white shadow-md rounded-lg">
        <div className="">
         <div className="text-center mb-14 lg:mb-28">
           <span className="text-6xl text-black font-['Poppins'] font-heading font-extrabold">
