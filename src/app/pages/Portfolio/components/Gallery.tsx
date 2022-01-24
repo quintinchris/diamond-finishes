@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef  } from "react";
 import {
   DeckAndPatioImages,
   FlooringImages,
@@ -13,13 +13,34 @@ export function Gallery() {
   const [index, setIndex] = useState(0);
   const images = KitchenAndBathImages;
   // TODO: switch source based on tab selected
+  const ref = useRef<HTMLDivElement>(null);
 
+  const assignProgressToEachImage = (images: Array<string>) => {
+    const progress = Math.floor(100 / images.length);
+    const imagesWithProgress = images.map((image, index) => {
+      return {
+        image: image,
+        progress: progress * index,
+      };
+    }, []);
+    
+  };
+
+
+  const updateProgressBarFill = (index: number, images: Array<string>) => {
+    const progress = Math.floor((index / images.length) * 100);
+    ref.current!.style.width = `${progress}%`;
+    ref.current!.style.transition = "width 0.7s ease-in-out";
+  };
+  
   const next = () => {
     setIndex((i) => (i + 1) % images.length);
+    updateProgressBarFill(index, images);
     // TODO: add function to update loading bar progress
   };
   const prev = () => {
     setIndex((i) => (i - 1) % images.length);
+    updateProgressBarFill(index, images);
     // TODO: add function to update loading bar progress
   };
 
@@ -53,23 +74,23 @@ export function Gallery() {
           </div>
         </div>
         <div className="relative my-20 flex flex-row">
-          <div className="hidden lg:block overflow-hidden animate-fade-in">
+          <div className="hidden">
             <img
-              className="w-112 h-96 object-cover"
+              className="w-112 h-96 object-cover ease-in-out duration-300"
               src={images[index - 1]}
               alt=""
             />
           </div>
-          <div className="place-self-center content-center justify-center mx-auto animate-fade-out">
+          <div className="place-self-center content-center justify-center mx-auto">
             <img
-              className="w-112 h-96 object-cover"
+              className="w-112 h-96 object-cover ease-in-out duration-500 animate-fade-out"
               src={images[index]}
               alt=""
             />
           </div>
           <div className="hidden">
             <img
-              className="h-96 mb-12 object-cover animate-fade-in"
+              className="h-96 mb-12 object-cover animate-fade-in ease-in-out duration-300"
               src={images[index + 1]}
               alt=""
             />
@@ -89,9 +110,9 @@ export function Gallery() {
                 <path d="M1427 301l-531 531 531 531q19 19 19 45t-19 45l-166 166q-19 19-45 19t-45-19l-742-742q-19-19-19-45t19-45l742-742q19-19 45-19t45 19l166 166q19 19 19 45t-19 45z"></path>
               </svg>
             </button>
-            <div className="rounded-lg w-72 mx-24 p-4 m-auto">
+            <div id="progressBar" className="rounded-lg w-72 mx-24 p-4 m-auto">
               <div className="w-full h-2 bg-gray-400 rounded-full">
-                <div className="w-1/4 h-full text-center text-xs text-white bg-red-800 rounded-full"></div>
+                <div id="progressBarFill" ref={ref} className="h-full w-0 text-center text-xs text-white bg-red-800 rounded-full"></div>
               </div>
             </div>
             <button onClick={next} className="inline-flex items-center justify-center w-10 h-12 rounded-full hover:bg-gray-100 active:bg-gray-200">

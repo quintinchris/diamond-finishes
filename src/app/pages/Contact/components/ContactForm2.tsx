@@ -60,9 +60,8 @@ export function ContactForm() {
             <h2 className="text-4xl lg:text-5xl text-white font-['Poppins'] font-bold leading-tight">
               Get a quote
             </h2>
-            <div className="text-gray-200 mt-4 w-5/6">
-              Fill out the form and our team will get back to you within 24
-              hours.
+            <div className="text-gray-200 mt-6 w-5/6">
+              Fill out the form and our team will get back to you as soon as possible!
             </div>
             <div className="text-center text-white mt-16">
               <div className="md:[flex flex-row]">
@@ -72,7 +71,7 @@ export function ContactForm() {
                     alt="phone"
                     className="w-10 h-10 pr-4"
                   />
-                  <span>+1 302-504-5409</span>
+                  <span>(302) 279-6114</span>
                 </div>
                 <div className="hover:box-border mt-2 px-4 py-6 w-3/4 text-center rounded-lg hover:border-2 hover:border-white hover:bg-maroon3 cursor-pointer">
                   <a

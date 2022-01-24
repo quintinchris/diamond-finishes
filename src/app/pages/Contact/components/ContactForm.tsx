@@ -15,6 +15,9 @@ export function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     let emailMessage = "";
+    // call api
+    // if response is success show alert saying message sent
+    // else show loading spinner
     const response = isFilePicked ? callImageApi(selectedFile) : null;
     response?.then(data => {
         emailMessage = message + `/n/nSee Images at: ${data}`;
@@ -35,7 +38,7 @@ export function ContactForm() {
   };
 
   return (
-    <div id="contactus" className="bg-gray-300 text-gray-100 px-8 py-12">
+    <div id="contactus" className="bg-maroon text-gray-100 px-8 py-12">
       <div className="max-w-screen-xl shadow-lg px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
         <div className="flex flex-col gap-8 mr-2 justify-between">
           <div>
