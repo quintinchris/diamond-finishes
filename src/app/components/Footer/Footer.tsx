@@ -1,36 +1,37 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 export function Footer() {
   return (
-    <footer className="bg-gray-300 dark:bg-gray-800 w-full h-1/2 pt-6 pb-4 overfow:hidden">
-      <div className="max-w-screen-xl mx-auto px-4">
-        <ul className="max-w-screen-md mx-auto text-lg font-light flex flex-wrap justify-between">
-          <li className="my-2">
+    <footer className="bg-maroon h-1/2 pt-24 pb-4 overfow:hidden">
+      {/* <hr className="h-px mb-20 border-gray-400 dark:bg-gray-700" /> */}
+      <div className="mx-auto px-4 pb-8">
+        <div className="flex items-center justify-between">
+          <div className="ml-4">
             <a
-              className="text-black hover:text-white dark:text-gray-300 dark:hover:text-white transition-colors duration-200"
-              href="#"
+              href="/"
+              className="text-md tracking-tighter text-white font-['Poppins'] hover:text-gray-300"
             >
-              FAQ
+              © 2022 Diamond Finishes LLC
             </a>
-          </li>
-          <li className="my-2">
-            <a
-              className="text-black hover:text-white dark:text-gray-300 dark:hover:text-white transition-colors duration-200"
-              href="#"
-            >
-              Portfolio
+          </div>
+          <div>
+            <img
+              className="h-7 w-8 mr-16"
+              src="/icons/diamond-white.svg"
+              alt="Diamond"
+            />
+          </div>
+          <div className="flex flex-row space-x-4 mr-6">
+            <a href="mailto: DiamondFinishes2@gmail.com?subject=NewInquiryFromWebsite">
+              <img
+                className="h-7 w-8"
+                src="/icons/envelope.svg"
+                alt="Envelope"
+              />
             </a>
-          </li>
-          <li className="my-2">
-            <a
-              className="text-black hover:text-white dark:text-gray-300 dark:hover:text-white transition-colors duration-200"
-              href="#"
-            >
-              Contact
+            <a href="tel:302-279-6114">
+              <img className="h-7 w-8" src="/icons/phone.svg" alt="Phone" />
             </a>
-          </li>
-        </ul>
-        <div className="text-center text-gray-500 dark:text-gray-200 sm:pt-4 font-light flex items-center justify-center">
-          © 2022 Diamond Finishes LLC
+          </div>
         </div>
       </div>
     </footer>

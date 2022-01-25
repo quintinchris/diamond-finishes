@@ -2,7 +2,7 @@ import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri";
 
 export const WorkFlow: React.FC<{}> = () => {
   return (
-    <section className="relative overflow-hidden bg-white pb-12">
+    <section className="relative overflow-hidden bg-white">
       <div className="max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center pb-8">
           <h2 className="text-5xl font-['Poppins'] font-bold">How It Works</h2>
