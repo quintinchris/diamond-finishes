@@ -1,5 +1,3 @@
-import React from "react";
-import logo from "./logo.svg";
 import { Helmet } from "react-helmet-async";
 import {
   BrowserRouter as Router,
@@ -17,11 +15,12 @@ function App() {
   return (
     <Router>
       <Helmet
-        titleTemplate="%s - Diamond Finishes LLC"
-        defaultTitle="Diamond Finishes LLC"
+        titleTemplate="%s - Diamond Finishes"
+        defaultTitle="Diamond Finishes"
         htmlAttributes={{ lang: i18n.language }}
       >
         <meta name="description" content="Quality Carpentry Services" />
+        <link rel="icon" href="icons/diamond.svg" sizes="any" type="image/svg+xml" />
       </Helmet>
 
       <Routes>
