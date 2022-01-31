@@ -32,3 +32,15 @@ export const useInput = (initialValue: any) => {
     },
   };
 };
+
+export const useProgress = (initialValue: any) => {
+  const [progress, setProgress] = useState(initialValue);
+
+  return {
+    progress,
+    setProgress,
+    setProgressPercent: (index: number) => {
+      return 100 / index;
+    },
+  };
+};

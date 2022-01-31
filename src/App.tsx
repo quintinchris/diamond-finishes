@@ -20,7 +20,7 @@ function App() {
         htmlAttributes={{ lang: i18n.language }}
       >
         <meta name="description" content="Quality Carpentry Services" />
-        <link rel="icon" href="icons/diamond.svg" sizes="any" type="image/svg+xml" />
+        <link rel="icon" href="public/favicon.svg" sizes="any" type="image/svg+xml" />
       </Helmet>
 
       <Routes>
