@@ -12,10 +12,10 @@ export const sendEmail = (params: EmailTemplateParams) => {
     )
     .then(
       function (response: any) {
-        console.log("SUCCESS!", response.status, response.text);
+        console.log(`Email was sent successfully. Response code: ${response.status} ${response.text}`);
       },
       function (error: any) {
-        console.log("FAILED...", error);
+        console.log(`Error sending email: ${error}`);
       }
     );
 };

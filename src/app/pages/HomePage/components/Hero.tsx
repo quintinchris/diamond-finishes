@@ -1,28 +1,42 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable jsx-a11y/anchor-has-content */
+import { scrollToElement } from "../../../utils/scrollToElement";
+
 export function Hero() {
   return (
-    <div className="bg-white dark:bg-gray-800 overflow-hidden relative">
-      <div className="text-start w-1/2 py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
-        <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
-          <span className="block">Want to be millionaire ?</span>
-          <span className="block text-indigo-500">It&#x27;s today or never.</span>
-        </h2>
-        <div className="lg:mt-0 lg:flex-shrink-0">
-          <div className="mt-12 inline-flex rounded-md shadow">
+    <div className="bg-maroon dark:bg-gray-800 relative overflow-hidden h-full z-0">
+      <div className="flex flex-col content-center justify-center align-center">
+        <img
+          className="place-self-center w-3/5 h-1/4 mt-4 mb-6"
+          src="/icons/diamond-outline.svg"
+          alt="Diamond"
+        />
+      </div>
+      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pt-24 pl-4 w-2/5">
+        <div className="flex flex-col justify-items-center">
+          <h2 className="font-['Poppins'] font-semibold text-white dark:text-white sm:text-4xl">
+            <span className="block text-6xl leading-tight place-self-center">
+              Bring your ideas to life
+              {/* Make Your Home Shine */}
+            </span>
+            {/* <span className="block text-3xl pt-2">
+            With Diamond Finishes
+          </span> */}
+          </h2>
+          <p className="text-md text-center place-self-center mt-6 w-3/4 text-slate-300">
+            Providing Quality Carpentry Services In &amp; Around Historic New
+            Castle, DE.
+          </p>
+          <div className="mt-10 -ml-2">
             <button
               type="button"
-              className="py-4 px-6  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+              onClick={() => scrollToElement(".contact")}
+              className="py-2 px-4 w-1/3 bg-gray-600 hover:bg-gray-800 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
             >
-              Get started
+              <a href="/contact">Get A Quote!</a>
             </button>
           </div>
         </div>
       </div>
-      <img
-        src="/images/IMG-0682.jpg"
-        className="absolute h-full max-w-1/2 hidden lg:block right-8 top-0"
-      />
     </div>
   );
 }

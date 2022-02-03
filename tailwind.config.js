@@ -8,6 +8,8 @@ module.exports = {
     extend: {
       colors: {
         "maroon": "#450000",
+        "maroon2": "#740505",
+        "maroon3": "#3a0101",
         "df-gray": "#333333",
       }
     },

@@ -8,7 +8,7 @@ export function NavBar() {
               <img
                 className="h-7 w-8"
                 src="/icons/diamond.svg"
-                alt="Workflow"
+                alt="Diamond"
               />
               <span className="pl-2 my-auto font-['Poppins'] font-semibold text-black">
                 Diamond Finishes
@@ -18,19 +18,19 @@ export function NavBar() {
               <div className="ml-10 flex items-baseline space-x-4">
                 <a
                   className="text-black  hover:text-gray-500 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  href="/#"
+                  href="/"
                 >
                   Home
                 </a>
                 <a
                   className="text-black  hover:text-gray-500 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  href="/#"
+                  href="/portfolio"
                 >
-                  Gallery
+                  Portfolio
                 </a>
                 <a
                   className="text-black  hover:text-gray-500 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  href="/#"
+                  href="/contact"
                 >
                   Contact
                 </a>

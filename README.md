@@ -1,16 +1,3 @@
-# TODO:
-[ ] hook up contact form
-[ ] portfolio page
-[ ] contact page
-[ ] FAQ page?
-[ ] make responsive (mostly done, just some small issues to fix)
-[ ] fix bugs
-[ ] deploy
-
-# BUGS:
-[ ] smooth scroll
-[ ] 
-
 ## Notes
 to make the diamond logo stretch, add `preserveAspectRatio="none"` to the svg
 # Getting Started with Create React App

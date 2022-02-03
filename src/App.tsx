@@ -1,17 +1,35 @@
-import React from "react";
-import logo from "./logo.svg";
+import { Helmet } from "react-helmet-async";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";import { useTranslation } from 'react-i18next';
+
 import "./App.css";
 import { HomePage } from "./app/pages/HomePage";
-import { NavBar } from "./app/components/NavBar";
-import { Footer } from "./app/components/Footer";
+import { Portfolio } from "./app/pages/Portfolio";
+import { Contact } from "./app/pages/Contact";
 
 function App() {
+  const { i18n } = useTranslation();
   return (
-    <>
-      <NavBar />
-      <HomePage />
-      <Footer />
-    </>
+    <Router>
+      <Helmet
+        titleTemplate="%s - Diamond Finishes"
+        defaultTitle="Diamond Finishes"
+        htmlAttributes={{ lang: i18n.language }}
+      >
+        <meta name="description" content="Quality Carpentry Services" />
+        <link rel="icon" href="public/favicon.svg" sizes="any" type="image/svg+xml" />
+      </Helmet>
+
+      <Routes>
+        <Route path={process.env.PUBLIC_URL + "/"} element={<HomePage />} />
+        <Route path={process.env.PUBLIC_URL + "/portfolio"} element={<Portfolio />} />
+        <Route path={process.env.PUBLIC_URL + "/contact"} element={<Contact />} />
+      </Routes>
+      {/* <GlobalStyle /> */}
+    </Router>
   );
 }
 
