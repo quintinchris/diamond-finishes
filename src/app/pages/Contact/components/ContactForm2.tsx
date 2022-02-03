@@ -3,8 +3,8 @@ import {
   sendEmail,
   EmailTemplateParams,
   useInput,
-  callImageApi,
-  callImageApiWithFile,
+  getImageUrl,
+  convertToBase64
 } from "../../../utils";
 
 export function ContactForm() {
@@ -22,34 +22,59 @@ export function ContactForm() {
   const [selectedFile, setSelectedFile] = useState<any>();
   const [isFilePicked, setIsFilePicked] = useState(false);
 
-  const selectImage = (event: any) => {
-    setSelectedFile(event.target.files[0]);
-    setIsFilePicked(true);
-  };
+  const handleImageUpload = async (e: any) => {
+    const file = e.target.files[0];
+    if (file) {
+      let base64Image = await convertToBase64(file);
+      setSelectedFile(base64Image);
+      setIsFilePicked(true);
+    } else {
+      alert("Please select an image");
+    }
+  }
+  
+  const getImageForMessage = async (base64Image: string) => {
+    if (isFilePicked && selectedFile) {
+      const res = await getImageUrl(base64Image);
+      console.log(res);
+      return res.data.image.url;
+    } else {
+      alert("No image selected");
+    }
+  }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    const imageUrl = isFilePicked ? callImageApiWithFile(selectedFile) : null;
-    const emailMessage = imageUrl
-      ? message + `\n\nSee Images at: ${imageUrl}`
-      : message;
-
-    // TODO: add validation
-    // emailMessage === "" ?? alert("Please enter a message");
-
-    const params: EmailTemplateParams = {
-      name,
-      contact,
-      message: emailMessage,
-    };
-
-    sendEmail(params);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert(
-      `Submitting Name ${name}, contact ${contact}, message ${emailMessage}`
-    );
-    resetName();
-    resetContact();
-    resetMessage();
+    if (isFilePicked && selectedFile) {
+      const imageUrl = await getImageForMessage(selectedFile);
+      const paramsWithImage: EmailTemplateParams = {
+        name,
+        contact,
+        message: message + `\n\nSee Images at: ${imageUrl}`,
+      };
+      sendEmail(paramsWithImage);
+      alert(
+        `Submitting Name ${paramsWithImage.name}, contact ${paramsWithImage.contact}, message ${paramsWithImage.message}`
+      );
+      resetName();
+      resetContact();
+      resetMessage();
+      setIsFilePicked(false);
+    } else {
+      let params: EmailTemplateParams = {
+        name,
+        contact,
+        message,
+      };
+      sendEmail(params);
+      e.preventDefault();
+      alert(
+        `Submitting Name ${params.name}, contact ${params.contact}, message ${params.message}`
+      );
+      resetName();
+      resetContact();
+      resetMessage();
+    }
   };
 
   return (
@@ -67,7 +92,10 @@ export function ContactForm() {
             <div className="text-center text-white mt-16">
               <div className="md:[flex flex-row]">
                 <div className="hover:box-border px-4 py-6 w-3/4 text-center rounded-lg hover:bg-maroon3 hover:border-2 hover:border-white cursor-pointer">
-                  <a className="flex flex-row items-center content-center justify-start" href="tel:302-279-6114">
+                  <a
+                    className="flex flex-row items-center content-center justify-start"
+                    href="tel:302-279-6114"
+                  >
                     <img
                       src="/icons/phone.svg"
                       alt="phone"
@@ -134,7 +162,7 @@ export function ContactForm() {
                   className="cursor-pointer z-0 opacity-0 absolute place-self-center"
                   type="file"
                   name="file"
-                  onChange={selectImage}
+                  onChange={handleImageUpload}
                 />
                 <div className="flex flex-row items-center content-center justify-start cursor-pointer z-10">
                   <img

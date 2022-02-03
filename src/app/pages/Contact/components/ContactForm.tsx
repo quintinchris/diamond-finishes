@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { sendEmail, EmailTemplateParams, useInput, callImageApi } from "../../../utils";
+import { sendEmail, EmailTemplateParams, useInput } from "../../../utils";
 
 export function ContactForm() {
   const { value:name, bind:bindName, reset:resetName } = useInput("");
@@ -14,24 +14,18 @@ export function ContactForm() {
 };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    let emailMessage = "";
     // call api
     // if response is success show alert saying message sent
     // else show loading spinner
-    const response = isFilePicked ? callImageApi(selectedFile) : null;
-    response?.then(data => {
-        emailMessage = message + `/n/nSee Images at: ${data}`;
-    });
-
     const params: EmailTemplateParams = {
       name,
       contact,
-      message: emailMessage ?? message,
+      message: message,
     };
 
     sendEmail(params);
     e.preventDefault();
-    alert(`Submitting Name ${name}, contact ${contact}, message ${emailMessage ?? message}`);
+    alert(`Submitting Name ${name}, contact ${contact}, message ${message}`);
     resetName();
     resetContact();
     resetMessage();
