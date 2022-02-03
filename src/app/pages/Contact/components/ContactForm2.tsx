@@ -78,7 +78,7 @@ export function ContactForm() {
   };
 
   return (
-    <div className="bg-maroon text-gray-100 px-8 py-12">
+    <div className="bg-maroon text-gray-100 px-8 py-12 overflow-hidden">
       <div className="max-w-screen-xl px-8 pr-20 grid gap-8 grid-cols-1 md:grid-cols-2 py-2 mx-auto text-gray-900">
         <div className="flex flex-col gap-8 mr-2 justify-between">
           <div>
