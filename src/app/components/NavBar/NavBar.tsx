@@ -1,3 +1,5 @@
+import {GrDiamond} from 'react-icons/gr';
+
 export function NavBar() {
   return (
     <header className="sticky top-0 bg-white z-10 backdrop-filter backdrop-blur-lg bg-opacity-30 firefox:bg-opacity-90">
@@ -5,11 +7,7 @@ export function NavBar() {
         <div className="flex items-center justify-between h-10">
           <div className="w-full justify-between flex items-center">
             <a className="flex flex-shrink-0 justify-between" href="/">
-              <img
-                className="h-7 w-8"
-                src="/icons/diamond.svg"
-                alt="Diamond"
-              />
+              <GrDiamond color="black" className="h-7 w-8"/>
               <span className="pl-2 my-auto font-['Poppins'] font-semibold text-black">
                 Diamond Finishes
               </span>

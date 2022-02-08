@@ -51,7 +51,7 @@ export function ContactForm() {
           </div>
           <div className="mt-8 text-center">
             <img
-              src="/icons/contact-3.svg"
+              src="src/assets/icons/contact-3.svg"
               alt="contact us"
               className="w-full -mx-10 -mt-10 p-0"
             />

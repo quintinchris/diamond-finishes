@@ -14,7 +14,7 @@ export function Team() {
             <a href="#" className="block relative">
               <img
                 alt="profil"
-                src="/images/blankprofile.png"
+                src="/assets/images/blankprofile.png"
                 className="mx-auto object-cover rounded-lg h-40 w-40  border-2 border-white dark:border-gray-800"
               />
             </a>
@@ -39,7 +39,7 @@ export function Team() {
             <a href="#" className="block relative">
               <img
                 alt="profil"
-                src="/images/blankprofile.png"
+                src="/assets/images/blankprofile.png"
                 className="mx-auto object-cover rounded-lg h-40 w-40  border-2 border-white dark:border-gray-800"
               />
             </a>

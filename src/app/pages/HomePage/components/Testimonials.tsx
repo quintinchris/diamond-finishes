@@ -1,3 +1,5 @@
+import { BsPersonCircle } from "react-icons/bs";
+
 export function Testimonials() {
   return (
     <div className="p-4 mt-32 mb-32">
@@ -16,13 +18,9 @@ export function Testimonials() {
               </p>
             </div>
             <div className="justify-self-end pt-6 flex justify-start">
-              <img
-                alt="profil"
-                src="/images/blankprofile.png"
-                className="object-cover rounded-full h-10 w-10 "
-              />
+              <BsPersonCircle color="gray" className="object-cover rounded-full h-10 w-10" />
               <div className="flex flex-col ml-2 justify-between content-end">
-                <span className="font-semibold text-indigo-500 text-sm">
+                <span className="font-semibold text-maroon text-sm">
                   Jean Miguel
                 </span>
                 <span className="dark:text-gray-400 text-xs">Homeowner</span>
@@ -34,20 +32,17 @@ export function Testimonials() {
           <div className="flex flex-col mt-2 mb-6">
             <div className="self-start pb-8">
               <p className="text-gray-600 font-['Ubuntu'] font-bold">
-                "Diamond Finishes team does the best work in Delaware! I had them
-                renovate my property and they helped me create some custom
+                "Diamond Finishes team does the best work in Delaware! I had
+                them renovate my property and they helped me create some custom
                 peices that I wouldn't have been able to have done anywhere
-                else! Highly recommend the team to anyone looking for custom woodworking!"
+                else! Highly recommend the team to anyone looking for custom
+                woodworking!"
               </p>
             </div>
             <div className="justify-self-end flex justify-start">
-              <img
-                alt="profil"
-                src="/images/blankprofile.png"
-                className="object-cover rounded-full h-10 w-10 "
-              />
+              <BsPersonCircle color="gray" className="object-cover rounded-full h-10 w-10" />
               <div className="flex flex-col ml-2 justify-between content-end">
-                <span className="font-semibold text-indigo-500 text-sm">
+                <span className="font-semibold text-maroon text-sm">
                   Jean Miguel
                 </span>
                 <span className="dark:text-gray-400 text-xs">Homeowner</span>
@@ -66,13 +61,9 @@ export function Testimonials() {
               </p>
             </div>
             <div className="justify-self-end pt-6 flex justify-start">
-              <img
-                alt="profil"
-                src="/images/blankprofile.png"
-                className="object-cover rounded-full h-10 w-10 "
-              />
+              <BsPersonCircle color="gray" className="object-cover rounded-full h-10 w-10" />
               <div className="flex flex-col ml-2 justify-between content-end">
-                <span className="font-semibold text-indigo-500 text-sm">
+                <span className="font-semibold text-maroon text-sm">
                   Jean Miguel
                 </span>
                 <span className="dark:text-gray-400 text-xs">Homeowner</span>
