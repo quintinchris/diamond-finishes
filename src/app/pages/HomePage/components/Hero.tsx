@@ -1,26 +1,19 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import { scrollToElement } from "../../../utils/scrollToElement";
+import {RiVipDiamondFill} from "react-icons/ri";
 
 export function Hero() {
   return (
     <div className="bg-maroon dark:bg-gray-800 relative overflow-hidden h-full z-0">
       <div className="flex flex-col content-center justify-center align-center">
-        <img
-          className="place-self-center w-3/5 h-1/4 mt-4 mb-6"
-          src="/icons/diamond-outline.svg"
-          alt="Diamond"
-        />
+        <RiVipDiamondFill color="black" className="place-self-center w-4/5 h-screen"/>
       </div>
       <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pt-24 pl-4 w-2/5">
         <div className="flex flex-col justify-items-center">
           <h2 className="font-['Poppins'] font-semibold text-white dark:text-white sm:text-4xl">
             <span className="block text-6xl leading-tight place-self-center">
               Bring your ideas to life
-              {/* Make Your Home Shine */}
             </span>
-            {/* <span className="block text-3xl pt-2">
-            With Diamond Finishes
-          </span> */}
           </h2>
           <p className="text-md text-center place-self-center mt-6 w-3/4 text-slate-300">
             Providing Quality Carpentry Services In &amp; Around Historic New

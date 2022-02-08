@@ -45,7 +45,7 @@ export function Form() {
           </div>
           <div className="mt-8 text-center">
             <img
-              src="/icons/contactus.svg"
+              src="src/assets/icons/contactus.svg"
               alt="contact us"
               className="w-full"
             />

@@ -6,6 +6,9 @@ import {
   getImageUrl,
   convertToBase64
 } from "../../../utils";
+import {BsTelephoneFill} from "react-icons/bs";
+import {FaRegEnvelope} from 'react-icons/fa';
+import {MdOutlineUpload} from 'react-icons/md';
 
 export function ContactForm() {
   const { value: name, bind: bindName, reset: resetName } = useInput("");
@@ -96,11 +99,7 @@ export function ContactForm() {
                     className="flex flex-row items-center content-center justify-start"
                     href="tel:302-279-6114"
                   >
-                    <img
-                      src="/icons/phone.svg"
-                      alt="phone"
-                      className="w-10 h-10 pr-4"
-                    />
+                    <BsTelephoneFill color="white" className="w-10 h-10 pr-4"/>
                     <span>(302) 279-6114</span>
                   </a>
                 </div>
@@ -109,11 +108,7 @@ export function ContactForm() {
                     className="flex flex-row items-center content-center justify-start"
                     href="mailto: DiamondFinishes2@gmail.com?subject=NewInquiryFromWebsite"
                   >
-                    <img
-                      src="/icons/envelope.svg"
-                      alt="envelope"
-                      className="w-10 h-10 pr-4"
-                    />
+                    <FaRegEnvelope color="white" className="w-10 h-10 pr-4" />
                     <span>diamondfinishes2@gmail.com</span>
                   </a>
                 </div>
@@ -165,11 +160,7 @@ export function ContactForm() {
                   onChange={handleImageUpload}
                 />
                 <div className="flex flex-row items-center content-center justify-start cursor-pointer z-10">
-                  <img
-                    src="/icons/upload.svg"
-                    alt="upload"
-                    className="w-10 h-10 pr-4 cursor-pointer"
-                  />
+                  <MdOutlineUpload color="white" className="w-10 h-10 pr-4 cursor-pointer" />
                   <span className="text-white font-['Poppins'] text-sm cursor-pointer">
                     Upload Image
                   </span>

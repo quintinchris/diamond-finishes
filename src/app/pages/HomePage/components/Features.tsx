@@ -2,7 +2,7 @@ import { FaHardHat } from "react-icons/fa";
 import { GiDrill, GiWoodBeam } from "react-icons/gi";
 import { IoConstruct } from "react-icons/io5";
 import { MdFence } from "react-icons/md";
-import { BsHouseDoor } from "react-icons/bs";
+import { BsHouseDoor, BsPersonCircle } from "react-icons/bs";
 
 export function Features() {
   return (
