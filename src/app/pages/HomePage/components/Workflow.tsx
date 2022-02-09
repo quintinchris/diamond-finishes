@@ -8,7 +8,7 @@ export const WorkFlow: React.FC<{}> = () => {
           <h2 className="text-5xl font-['Poppins'] font-bold">How It Works</h2>
           <p className="mt-6 text-gray-800">
             Check out our process, so you know what to expect when having us
-            work on a project.
+            work on your project.
           </p>
         </div>
 

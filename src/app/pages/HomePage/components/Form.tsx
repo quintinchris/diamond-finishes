@@ -53,11 +53,11 @@ export function Form() {
             <img
               src="icons/contact-3.svg"
               alt="contact us"
-              className="w-full -mx-10 -mt-10 p-0"
+              className="w-full md:-mx-10 md:-mt-10 p-0"
             />
           </div>
         </div>
-        <div className="ml-4">
+        <div className="md:ml-4">
           <form onSubmit={handleSubmit}>
             <div>
               <span className="uppercase text-sm text-gray-600 font-bold">

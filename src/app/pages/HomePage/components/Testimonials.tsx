@@ -6,7 +6,7 @@ export function Testimonials() {
       <p className="text-center text-5xl font-bold font-['Poppins'] text-gray-800 mt-8 mb-20">
         What Our Customers Are Saying
       </p>
-      <div className="max-w-screen grid grid-cols-3 gap-16 mb-8 mx-8">
+      <div className="max-w-screen grid grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 gap-16 mb-8 mx-8">
         <div className="bg-white h-auto w-auto shadow-lg mx-auto rounded rounded-tr-3xl px-4 pt-8 pb-2 border-2 border-maroon">
           <div className="flex flex-col justify-start mt-2 mb-6">
             <div className="self-start pb-8">
