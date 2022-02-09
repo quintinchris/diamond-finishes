@@ -1,5 +1,5 @@
 import {BsTelephoneFill} from "react-icons/bs";
-import {IoDiamond} from 'react-icons/io5';
+import {IoDiamondOutline} from 'react-icons/io5';
 import {FaRegEnvelope} from 'react-icons/fa';
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
@@ -18,7 +18,7 @@ export function Footer() {
             </a>
           </div>
           <div>
-            <IoDiamond style={{color: "white"}} className="fill-white h-7 w-8 mr-20" />
+            <IoDiamondOutline color="white" className="fill-white h-7 w-8 mr-20" />
           </div>
           <div className="flex flex-row space-x-4 mr-6">
             <a href="mailto: DiamondFinishes2@gmail.com?subject=NewInquiryFromWebsite">

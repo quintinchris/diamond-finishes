@@ -3,7 +3,7 @@ import { Features } from './components/Features';
 import { Testimonials } from './components/Testimonials';
 import { NavBar } from "../../components/NavBar/NavBar";
 import { Footer } from "../../components/Footer/Footer";
-import { ContactForm } from '../Contact/components/ContactForm';
+import { Form } from './components/Form';
 import { WorkFlow } from './components/Workflow';
 
 
@@ -15,7 +15,7 @@ export function HomePage() {
       <Features />
       <WorkFlow />
       <Testimonials />
-      <ContactForm />
+      <Form />
       <Footer />
     </>
   );

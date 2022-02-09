@@ -20,7 +20,7 @@ function App() {
         htmlAttributes={{ lang: i18n.language }}
       >
         <meta name="description" content="Quality Carpentry Services" />
-        <link rel="icon" href="src/assets/icons/diamond.svg" sizes="any" type="image/svg+xml" />
+        <link rel="icon" href="icons/diamond.svg" sizes="any" type="image/svg+xml" />
       </Helmet>
 
       <Routes>
@@ -28,7 +28,6 @@ function App() {
         <Route path={process.env.PUBLIC_URL + "/portfolio"} element={<Portfolio />} />
         <Route path={process.env.PUBLIC_URL + "/contact"} element={<Contact />} />
       </Routes>
-      {/* <GlobalStyle /> */}
     </Router>
   );
 }
