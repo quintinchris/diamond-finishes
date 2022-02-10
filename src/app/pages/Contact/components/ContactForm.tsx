@@ -85,7 +85,7 @@ export function ContactForm() {
       <div className="max-w-screen-xl md:px-8 md:pr-20 grid gap-8 grid-cols-1 md:grid-cols-2 py-2 mx-auto text-gray-900">
         <div className="grid grid-cols-1 gap-8 mr-2 justify-between text-center md:text-left">
           <div>
-            <h2 className="text-4xl lg:text-5xl text-white font-['Poppins'] font-bold leading-tight">
+            <h2 className="text-4xl lg:text-5xl text-white font-['Poppins'] font-bold sm:tracking-tighter md:tracking-tight">
               Get a quote
             </h2>
             <div className="text-gray-200 mt-6 md:w-5/6">

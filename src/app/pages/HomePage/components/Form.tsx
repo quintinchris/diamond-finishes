@@ -36,7 +36,7 @@ export function Form() {
       <div className="max-w-screen-xl shadow-lg px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
         <div className="flex flex-col gap-8 mr-2 justify-between">
           <div>
-            <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold leading-tight sm:tracking-tighter md:tracking-tight">
               Let's talk about your next project!
             </h2>
             <div className="text-gray-700 mt-8">
@@ -49,7 +49,7 @@ export function Form() {
               instead.
             </div>
           </div>
-          <div className="mt-8 text-center">
+          <div className="hidden md:block mt-8 text-center">
             <img
               src="icons/contact-3.svg"
               alt="contact us"

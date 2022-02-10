@@ -3,7 +3,7 @@ import { BsPersonCircle } from "react-icons/bs";
 export function Testimonials() {
   return (
     <div className="p-4 mt-32 mb-32">
-      <p className="text-center text-5xl font-bold font-['Poppins'] text-gray-800 mt-8 mb-20">
+      <p className="text-center text-5xl font-bold font-['Poppins'] text-gray-800 mt-8 mb-20 sm:tracking-tighter md:tracking-tight">
         What Our Customers Are Saying
       </p>
       <div className="max-w-screen grid grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 gap-16 mb-8 mx-8">
