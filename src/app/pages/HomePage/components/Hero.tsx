@@ -14,7 +14,7 @@ export function Hero() {
             Diamond Finishes
           </h1>
           <RiVipDiamondFill
-            color="gray"
+            color="#333333"
             className="place-self-center w-96 h-96 mt-16 px-2"
           />
         </div>
