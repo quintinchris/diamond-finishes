@@ -12,7 +12,7 @@ export function NavBar() {
   })
 
   return (
-    <header className="sticky top-0 bg-white z-10 backdrop-filter backdrop-blur-lg bg-opacity-30 firefox:bg-opacity-90">
+    <header className="sticky top-0 bg-white z-10 backdrop-filter backdrop-blur-lg bg-opacity-30 firefox:bg-opacity-90 w-full overflow-x-hidden">
       <div className="max-w-7xl mx-auto lg:pl-6 lg:pr-4 sm:pl-2 sm:pr-2">
         <div className="flex items-center justify-between h-10">
           <div className="w-full justify-between flex items-center">
