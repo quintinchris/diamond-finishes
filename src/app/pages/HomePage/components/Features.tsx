@@ -9,7 +9,7 @@ export function Features() {
     <section className="bg-white">
       <div className="max-w-screen-xl px-4 py-16 mx-auto space-y-8 sm:px-6 lg:px-8">
         <div className="max-w-lg mx-auto text-center">
-          <h2 className="text-center text-5xl font-bold font-['Poppins'] text-gray-800 mb-16">
+          <h2 className="text-center text-5xl font-bold font-['Poppins'] text-gray-800 mb-16 sm:tracking-tighter md:tracking-tight">
             Our Services
           </h2>
         </div>

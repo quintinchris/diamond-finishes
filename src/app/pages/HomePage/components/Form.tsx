@@ -1,19 +1,28 @@
-import { sendEmail } from "../../utils/sendEmail";
-import { EmailTemplateParams } from "../../utils/types";
-import { useInput } from "../../utils/hooks";
+import { useState } from "react";
+import { sendEmail, EmailTemplateParams, useInput } from "../../../utils";
 
 export function Form() {
   const { value:name, bind:bindName, reset:resetName } = useInput("");
   const { value:contact, bind:bindContact, reset:resetContact } = useInput("");
   const { value:message, bind:bindMessage, reset:resetMessage } = useInput("");
+  const [selectedFile, setSelectedFile] = useState();
+  const [isFilePicked, setIsFilePicked] = useState(false);
 
+  const selectImage = (event: any) => {
+    setSelectedFile(event.target.files[0]);
+    setIsFilePicked(true);
+};
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // call api
+    // if response is success show alert saying message sent
+    // else show loading spinner
     const params: EmailTemplateParams = {
       name,
       contact,
-      message,
+      message: message,
     };
+
     sendEmail(params);
     e.preventDefault();
     alert(`Submitting Name ${name}, contact ${contact}, message ${message}`);
@@ -23,14 +32,11 @@ export function Form() {
   };
 
   return (
-    <div id="contactus" className="bg-slate-600 text-gray-100 px-8 py-12">
-      <div className="text-center w-full">
-        <h1 className="text-5xl font-bold"> Contact Us </h1>
-      </div>
-      <div className="max-w-screen-xl mt-16 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
+    <div id="contactus" className="bg-maroon text-gray-100 px-8 py-12">
+      <div className="max-w-screen-xl shadow-lg px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
         <div className="flex flex-col gap-8 mr-2 justify-between">
           <div>
-            <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold leading-tight sm:tracking-tighter md:tracking-tight">
               Let's talk about your next project!
             </h2>
             <div className="text-gray-700 mt-8">
@@ -43,15 +49,15 @@ export function Form() {
               instead.
             </div>
           </div>
-          <div className="mt-8 text-center">
+          <div className="hidden md:block mt-8 text-center">
             <img
-              src="src/assets/icons/contactus.svg"
+              src="icons/contact-3.svg"
               alt="contact us"
-              className="w-full"
+              className="w-full md:-mx-10 md:-mt-10 p-0"
             />
           </div>
         </div>
-        <div className="ml-4">
+        <div className="md:ml-4">
           <form onSubmit={handleSubmit}>
             <div>
               <span className="uppercase text-sm text-gray-600 font-bold">

@@ -5,10 +5,12 @@ export const WorkFlow: React.FC<{}> = () => {
     <section className="relative overflow-hidden bg-white">
       <div className="max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center pb-8">
-          <h2 className="text-5xl font-['Poppins'] font-bold">How It Works</h2>
+          <h2 className="text-5xl font-['Poppins'] font-bold sm:tracking-tighter md:tracking-tight">
+            How It Works
+          </h2>
           <p className="mt-6 text-gray-800">
             Check out our process, so you know what to expect when having us
-            work on a project.
+            work on your project.
           </p>
         </div>
 

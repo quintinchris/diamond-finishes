@@ -1,17 +1,29 @@
+import { useEffect, useRef, useState } from 'react';
 import {GrDiamond} from 'react-icons/gr';
 
 export function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  const toggle = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    isOpen ? ref.current!.className = `block ease-out transition duration-500` : ref.current!.className = `hidden`;
+  })
+
   return (
-    <header className="sticky top-0 bg-white z-10 backdrop-filter backdrop-blur-lg bg-opacity-30 firefox:bg-opacity-90">
-      <div className="max-w-7xl mx-auto pl-6 pr-4">
+    <header className="sticky top-0 bg-white z-10 backdrop-filter backdrop-blur-lg bg-opacity-30 firefox:bg-opacity-90 w-full overflow-x-hidden">
+      <div className="max-w-7xl mx-auto lg:pl-6 lg:pr-4 sm:pl-2 sm:pr-2">
         <div className="flex items-center justify-between h-10">
           <div className="w-full justify-between flex items-center">
-            <a className="flex flex-shrink-0 justify-between" href="/">
-              <GrDiamond color="black" className="h-7 w-8"/>
-              <span className="pl-2 my-auto font-['Poppins'] font-semibold text-black">
+            <div className="flex flex-shrink-0 justify-between">
+              <a href="/">
+                <GrDiamond color="black" className="h-7 w-8" />
+              </a>
+              <span className="hidden md:block pl-2 my-auto text-xl font-['Poppins'] font-semibold text-black">
                 Diamond Finishes
               </span>
-            </a>
+            </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <a
@@ -36,7 +48,10 @@ export function NavBar() {
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">
-            <button className="text-gray-800 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
+            <button
+              onClick={toggle}
+              className="text-gray-800 dark:text-white inline-flex items-center justify-center p-2 rounded-md focus:outline-none"
+            >
               <svg
                 width="20"
                 height="20"
@@ -51,29 +66,23 @@ export function NavBar() {
           </div>
         </div>
       </div>
-      <div className="md:hidden">
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <div ref={ref} className="hidden">
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 grid col-auto justify-end text-right">
           <a
-            className="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            href="/#"
+            className="text-black hover:text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
+            href="/"
           >
             Home
           </a>
           <a
-            className="text-gray-800 dark:text-white block px-3 py-2 rounded-md text-base font-medium"
-            href="/#"
+            className="text-black hover:text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
+            href="/portfolio"
           >
-            Gallery
+            Portfolio
           </a>
           <a
-            className="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            href="/#"
-          >
-            Content
-          </a>
-          <a
-            className="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            href="/#"
+            className="text-black hover:text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
+            href="/contact"
           >
             Contact
           </a>
