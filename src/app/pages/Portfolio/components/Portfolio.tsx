@@ -17,13 +17,13 @@ export function Showcase() {
             Portfolio
           </span>
         </div>
-        <div className="grid grid-rows-auto grid-cols-1 gap-12 mx-4">
+        <div className="grid grid-rows-auto grid-cols-1 gap-12 mx-4 pb-6">
             <Section title="Kitchen & Bath" images={KitchenAndBathImages} />
             <Section title="Flooring" images={FlooringImages} />
             <Section title="Roofing" images={RoofingImages} />
             <Section title="Deck & Patio" images={DeckAndPatioImages} />
             <Section title="Woodworking" images={WoodworkingImages} />
-            <Section title="Other" images={OtherImages} />
+            {/* <Section title="Other" images={OtherImages} /> */}
         </div>
       </div>
     </section>

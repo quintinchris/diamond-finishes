@@ -1,6 +1,5 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
-import { scrollToElement } from "../../../utils/scrollToElement";
 import { RiVipDiamondFill } from "react-icons/ri";
+// import * as Icon from "/icons/under-construction.svg";
 
 export function Hero() {
   return (
@@ -13,12 +12,17 @@ export function Hero() {
           <h1 className="font-['Poppins'] font-semibold text-white text-center text-7xl">
             Diamond Finishes
           </h1>
-          <RiVipDiamondFill
+          <img
+            src="/icons/under-construction.svg"
+            alt="Construction illustration"
+            className="w-full h-full mt-10" 
+          />
+          {/* <RiVipDiamondFill
             color="#333333"
             className="place-self-center w-96 h-96 mt-16 px-2"
-          />
+          /> */}
         </div>
-        <div className="pt-40 h-72 grid grid-rows-2 gap-0 justify-items-center items-start">
+        <div className="pt-36 h-72 grid grid-rows-2 gap-0 justify-items-center items-start">
           <p className="font-['Poppins'] font-light text-white text-center text-2xl">
             We bring your ideas to life
           </p>

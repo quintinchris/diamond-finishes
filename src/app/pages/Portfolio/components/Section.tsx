@@ -6,7 +6,7 @@ interface SectionProps {
 export function Section(props: SectionProps) {
   return (
     <div>
-      <h3 className="font-['Poppins'] text-black text-3xl mb-6">{props.title}</h3>
+      <h3 className="font-['Poppins'] text-black text-3xl mb-6">{props.title}<hr></hr></h3>
       <div className="grid grid-rows-auto grid-cols-3 gap-4">
         {props.images
           ? props.images.map((image, i) => {

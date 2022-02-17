@@ -99,8 +99,7 @@ export function ContactForm() {
                   href="tel:302-279-6114"
                 >
                   <BsTelephoneFill color="white" className="w-10 h-10 pr-4" />
-                  <span className="hidden md:block">(302) 279-6114</span>
-                  <span className="block md:hidden">Call us!</span>
+                  <span className="block">Call us!</span>
                 </a>
               </div>
               <div className="hover:box-border md:mt-2 px-4 py-6 md:w-3/4 text-center rounded-lg hover:border-2 hover:border-white hover:bg-maroon3 cursor-pointer">
@@ -109,10 +108,7 @@ export function ContactForm() {
                   href="mailto: DiamondFinishes2@gmail.com?subject=NewInquiryFromWebsite"
                 >
                   <FaRegEnvelope color="white" className="w-10 h-10 pr-4" />
-                  <span className="hidden md:block">
-                    diamondfinishes2@gmail.com
-                  </span>
-                  <span className="block md:hidden">Email us!</span>
+                  <span className="block">Email us!</span>
                 </a>
               </div>
             </div>

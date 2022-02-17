@@ -20,7 +20,7 @@ export function NavBar() {
               <a href="/">
                 <GrDiamond color="black" className="h-7 w-8" />
               </a>
-              <span className="hidden md:block pl-2 my-auto font-['Poppins'] font-semibold text-black">
+              <span className="hidden md:block pl-2 my-auto text-xl font-['Poppins'] font-semibold text-black">
                 Diamond Finishes
               </span>
             </div>
