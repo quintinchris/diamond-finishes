@@ -1,4 +1,5 @@
 import { resolve } from 'path';
+import path from 'path/posix';
 
 const config = {
     entry: [
@@ -52,7 +53,9 @@ const config = {
             '.js'
         ],
         alias: {
-            'react-dom': '@hot-loader/react-dom'
+            'react-dom': '@hot-loader/react-dom',
+            utils: resolve(__dirname, 'src/app/utils/index'),
+            components: resolve(__dirname, 'src/app/components')
         }
     }
 };

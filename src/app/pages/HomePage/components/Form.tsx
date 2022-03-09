@@ -1,17 +1,9 @@
-import { useState } from "react";
 import { sendEmail, EmailTemplateParams, useInput } from "../../../utils";
 
 export function Form() {
   const { value:name, bind:bindName, reset:resetName } = useInput("");
   const { value:contact, bind:bindContact, reset:resetContact } = useInput("");
   const { value:message, bind:bindMessage, reset:resetMessage } = useInput("");
-  const [selectedFile, setSelectedFile] = useState();
-  const [isFilePicked, setIsFilePicked] = useState(false);
-
-  const selectImage = (event: any) => {
-    setSelectedFile(event.target.files[0]);
-    setIsFilePicked(true);
-};
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     // call api

@@ -1,12 +1,14 @@
+import { useState } from "react";
 import {
   sendEmail,
   EmailTemplateParams,
   useInput,
-} from "../../../utils";
+} from "../../utils";
 import {BsTelephoneFill} from "react-icons/bs";
 import {FaRegEnvelope} from 'react-icons/fa';
+import {MdOutlineUpload} from 'react-icons/md';
 
-export function ContactForm() {
+export function FormWithImageUpload() {
   const { value: name, bind: bindName, reset: resetName } = useInput("");
   const {
     value: contact,
@@ -18,23 +20,54 @@ export function ContactForm() {
     bind: bindMessage,
     reset: resetMessage,
   } = useInput("");
+  const [selectedFile, setSelectedFile] = useState<any>();
+  const [isFilePicked, setIsFilePicked] = useState(false);
+  const images: Array<string> = [];
 
+  const handleImageUpload = async (e: any) => {
+    const file = e.target.files[0];
+    if (file) {
+      // let base64Image = await convertToBase64(file);
+      images.push(file);
+      setSelectedFile(file);
+      setIsFilePicked(true);
+    } else {
+      alert("Please select an image");
+    }
+  }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    let params: EmailTemplateParams = {
-      name,
-      contact,
-      message,
-    };
-    sendEmail(params);
-    e.preventDefault();
-    alert(
-      `Submitting Name ${params.name}, contact ${params.contact}, message ${params.message}`
-    );
-    resetName();
-    resetContact();
-    resetMessage();
+    if (isFilePicked && selectedFile) {
+      // const imageUrl = await getImageForMessage(selectedFile);
+      const paramsWithImage: EmailTemplateParams = {
+        name,
+        contact,
+        message: message,
+      };
+      sendEmail(paramsWithImage);
+      alert(
+        `Submitting Name ${paramsWithImage.name}, contact ${paramsWithImage.contact}, message ${paramsWithImage.message}`
+      );
+      resetName();
+      resetContact();
+      resetMessage();
+      setIsFilePicked(false);
+    } else {
+      let params: EmailTemplateParams = {
+        name,
+        contact,
+        message,
+      };
+      sendEmail(params);
+      e.preventDefault();
+      alert(
+        `Submitting Name ${params.name}, contact ${params.contact}, message ${params.message}`
+      );
+      resetName();
+      resetContact();
+      resetMessage();
+    }
   };
 
   return (
@@ -105,6 +138,32 @@ export function ContactForm() {
                 {...bindMessage}
                 className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               ></textarea>
+            </div>
+            <div className="mt-4 flex flex-row">
+              <div className="rounded-full bg-gray-800 hover:bg-slate-900 px-4 py-1 w-1/2 overflow:hidden">
+                <input
+                  className="cursor-pointer z-0 opacity-0 absolute place-self-center"
+                  type="file"
+                  name="file"
+                  onChange={handleImageUpload}
+                />
+                <div className="flex flex-row items-center content-center justify-start cursor-pointer z-10">
+                  <MdOutlineUpload
+                    color="white"
+                    className="w-10 h-10 pr-4 cursor-pointer"
+                  />
+                  <span className="text-white font-['Poppins'] text-sm cursor-pointer">
+                    Upload Image
+                  </span>
+                </div>
+              </div>
+              {isFilePicked ? (
+                <div className="pl-6 w-1/2 text-center place-self-center font-['Poppins']">
+                  <p>Filename: {selectedFile?.name}</p>
+                </div>
+              ) : (
+                <div></div>
+              )}
             </div>
             <div className="mt-8">
               <button
