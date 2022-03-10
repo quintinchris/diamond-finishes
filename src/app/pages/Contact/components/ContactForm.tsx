@@ -30,7 +30,7 @@ export function ContactForm() {
     sendEmail(params);
     e.preventDefault();
     alert(
-      `Submitting Name ${params.name}, contact ${params.contact}, message ${params.message}`
+      `Message Sent! Thanks for your interest ${name}! We will get back to you as soon as possible.`
     );
     resetName();
     resetContact();
