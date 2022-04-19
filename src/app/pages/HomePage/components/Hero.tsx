@@ -16,7 +16,7 @@ export function Hero() {
       {/* Mobile Hero */}
       <div
         id="mobileHero"
-        className="block md:hidden bg-maroon z-0 h-screen grid grid-rows-2 content-between"
+        className="block lg:hidden bg-maroon z-0 h-screen grid grid-rows-2 content-between"
       >
         <div className="grid grid-rows-2 content-evenly pt-8">
           <h1 className="font-['Poppins'] font-semibold text-white text-center text-7xl">
@@ -63,7 +63,7 @@ export function Hero() {
         </div>
       </div>
       {/* Regular Hero */}
-      <div id="hero" className="hidden md:block bg-maroon relative h-screen z-0">
+      <div id="hero" className="hidden lg:block bg-maroon relative h-screen z-0">
         <div className="grid grid-cols-2 pt-8 pr-4 pl-4">
           <div className="grid grid-rows-3 text-center justify-content-center pt-10 mb-14">
             <h2 className="font-['Poppins'] font-semibold text-white dark:text-white sm:text-4xl">

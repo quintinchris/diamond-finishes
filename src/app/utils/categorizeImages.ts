@@ -10,9 +10,9 @@ export const FlooringImages = [
 ];
 
 export const KitchenAndBathImages = [
-    "images/kitchenAndBath/IMG-0677.jpg",
-    "images/kitchenAndBath/IMG-0681.jpg",
-    "images/kitchenAndBath/IMG-0682.jpg",
+    "images/kitchenAndBath/IMG-0677.JPG",
+    "images/kitchenAndBath/IMG-0681.JPG",
+    "images/kitchenAndBath/IMG-0682.JPG",
     "images/kitchenAndBath/IMG-0754.jpg",
     "images/kitchenAndBath/IMG-2783.jpg",
 ];

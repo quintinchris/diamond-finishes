@@ -1,4 +1,17 @@
-import { envConfig } from "../utils";
+import { envConfig } from ".";
+import axios from "axios";
+
+export const sendEmail = async (name: string, text: string, attachments?: Blob[]) => {
+  const endpoint = process.env.API_ENDPOINT;
+  const response = await axios.post(endpoint, {
+    name,
+    text,
+    attachments,
+  });
+
+  return response.data;
+}
+
 
 export function convertToBase64(file: Blob) {
   return new Promise((resolve, reject) => {
