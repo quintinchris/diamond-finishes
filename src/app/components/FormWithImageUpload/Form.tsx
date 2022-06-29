@@ -45,7 +45,7 @@ export function FormWithImageUpload() {
         contact,
         message: message,
       };
-      sendEmail(paramsWithImage);
+      // sendEmail(paramsWithImage);
       alert(
         `Submitting Name ${paramsWithImage.name}, contact ${paramsWithImage.contact}, message ${paramsWithImage.message}`
       );
@@ -59,7 +59,7 @@ export function FormWithImageUpload() {
         contact,
         message,
       };
-      sendEmail(params);
+      // sendEmail(params);
       e.preventDefault();
       alert(
         `Submitting Name ${params.name}, contact ${params.contact}, message ${params.message}`

@@ -27,7 +27,7 @@ export function ContactForm() {
       contact,
       message,
     };
-    sendEmail(params);
+    // sendEmail(params);
     e.preventDefault();
     alert(
       `Message Sent! Thanks for your interest ${name}! We will get back to you as soon as possible.`

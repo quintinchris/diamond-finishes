@@ -13,7 +13,7 @@ export const sendEmail = async (
     };
   });
   const endpoint = process.env.API_ENDPOINT;
-  const response = await axios.post(endpoint, {
+  const response = await axios.post(endpoint ?? "", {
     name,
     text,
     images,

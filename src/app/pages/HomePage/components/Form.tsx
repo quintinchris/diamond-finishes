@@ -15,7 +15,7 @@ export function Form() {
       message: message,
     };
 
-    sendEmail(params);
+    // sendEmail(params);
     e.preventDefault();
     alert(`Submitting Name ${name}, contact ${contact}, message ${message}`);
     resetName();

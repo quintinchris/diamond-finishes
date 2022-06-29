@@ -1,5 +1,5 @@
 export * from "./hooks";
 export * from "./types";
 export * from "./envConfig";
-export * from "./apiHelpers";
+export * from "./ApiHelpers";
 export * from "./categorizeImages";
