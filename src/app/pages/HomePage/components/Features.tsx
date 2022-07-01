@@ -26,49 +26,41 @@ export function Features() {
           <div className="block p-8 border-2 border-gray-800 shadow-lg rounded-xl">
             <IoConstruct color="maroon" className="w-8 h-8" />
             <h3 className="mt-3 text-xl font-bold text-black">
-              Something else
+              Kitchen &amp; Bath
             </h3>
             <p className="mt-4 text-md text-black">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
-              eius labore nisi tempore modi vel voluptate ullam nostrum adipisci
-              suscipit eaque quae cupiditate, accusamus minus laboriosam totam
-              laborum, deserunt sint.
+              Enjoy cooking for your loved ones, but can't stand your cabinet,
+              countertop, or backsplash? We can fix that! Let us upgrade your
+              kitchen so you can get the most out of your kitchen.
             </p>
           </div>
           <div className="block p-8 border-2 border-gray-800 shadow-lg rounded-xl">
             <GiWoodBeam color="maroon" className="w-8 h-8" />
-            <h3 className="mt-3 text-xl font-bold text-black">
-              Woodworking
-            </h3>
+            <h3 className="mt-3 text-xl font-bold text-black">Woodworking</h3>
             <p className="mt-4 text-md text-black">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
-              eius labore nisi tempore modi vel voluptate ullam nostrum adipisci
-              suscipit eaque quae cupiditate, accusamus minus laboriosam totam
-              laborum, deserunt sint.
+              Our team consists of true craftsmen and can create custom pieces
+              to enhance your space. Doors, cabinets, built-in's, and more!
             </p>
           </div>
           <div className="block p-8 border-2 border-gray-800 shadow-lg rounded-xl">
             <MdFence color="maroon" className="w-8 h-8" />
             <h3 className="mt-3 text-xl font-bold text-black">
-              Decks &amp; Fencing
+              Patios, Decks &amp; Fences
             </h3>
             <p className="mt-4 text-md text-black">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
-              eius labore nisi tempore modi vel voluptate ullam nostrum adipisci
-              suscipit eaque quae cupiditate, accusamus minus laboriosam totam
-              laborum, deserunt sint.
+              Let us enhance your backyard by building you a deck to host your
+              barbecue's, a patio to soak up the sun on, or a fence to provide
+              some privacy. Whatever your backyard needs are, we can make them a
+              reality!
             </p>
           </div>
           <div className="block p-8 border-2 border-gray-800 shadow-lg rounded-xl">
             <GiDrill color="maroon" className="w-10 h-8" />
-            <h3 className="mt-3 text-xl font-bold text-black">
-              Flooring
-            </h3>
+            <h3 className="mt-3 text-xl font-bold text-black">Flooring</h3>
             <p className="mt-4 text-md text-black">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
-              eius labore nisi tempore modi vel voluptate ullam nostrum adipisci
-              suscipit eaque quae cupiditate, accusamus minus laboriosam totam
-              laborum, deserunt sint.
+              Whether you're looking for tile, wood flooring, carpet or laminate, we
+              can help you pick out and install a new tile flooring that can
+              transform your space!
             </p>
           </div>
           <div className="block p-8 border-2 border-gray-800 shadow-lg rounded-xl">
