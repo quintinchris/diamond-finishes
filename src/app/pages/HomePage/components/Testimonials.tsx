@@ -18,11 +18,12 @@ export function Testimonials() {
               </p>
             </div>
             <div className="justify-self-end pt-6 flex justify-start">
-              <BsPersonCircle color="gray" className="object-cover rounded-full h-10 w-10" />
+              <BsPersonCircle
+                color="gray"
+                className="object-cover rounded-full h-10 w-10"
+              />
               <div className="flex flex-col ml-2 justify-between content-end">
-                <span className="font-semibold text-maroon text-sm">
-                  Jean Miguel
-                </span>
+                <span className="font-semibold text-maroon text-sm">Sean</span>
                 <span className="dark:text-gray-400 text-xs">Homeowner</span>
               </div>
             </div>
@@ -40,11 +41,12 @@ export function Testimonials() {
               </p>
             </div>
             <div className="justify-self-end flex justify-start">
-              <BsPersonCircle color="gray" className="object-cover rounded-full h-10 w-10" />
+              <BsPersonCircle
+                color="gray"
+                className="object-cover rounded-full h-10 w-10"
+              />
               <div className="flex flex-col ml-2 justify-between content-end">
-                <span className="font-semibold text-maroon text-sm">
-                  Jean Miguel
-                </span>
+                <span className="font-semibold text-maroon text-sm">Lula</span>
                 <span className="dark:text-gray-400 text-xs">Homeowner</span>
               </div>
             </div>
@@ -54,17 +56,21 @@ export function Testimonials() {
           <div className="flex flex-col mt-2 mb-6">
             <div className="self-start pb-8">
               <p className="text-gray-600 font-['Ubuntu'] font-bold">
-                "Diamond Finishes does high quality work faster than anyone else
-                I've worked with. They're dedication to craftsmanship is
-                something to behold. If you need a professional renovation, you
-                should choose Diamond Finishes!"
+                "Not only does the team at Diamond Finishes do high quality
+                work, they're got a true sense for design! They helped me come
+                up with a cool idea for my basement and built some really cool
+                built-in's that my wife and I are extremely happy with! Can't
+                wait to get their ideas for my next project."
               </p>
             </div>
             <div className="justify-self-end pt-6 flex justify-start">
-              <BsPersonCircle color="gray" className="object-cover rounded-full h-10 w-10" />
+              <BsPersonCircle
+                color="gray"
+                className="object-cover rounded-full h-10 w-10"
+              />
               <div className="flex flex-col ml-2 justify-between content-end">
                 <span className="font-semibold text-maroon text-sm">
-                  Jean Miguel
+                  Chris
                 </span>
                 <span className="dark:text-gray-400 text-xs">Homeowner</span>
               </div>
