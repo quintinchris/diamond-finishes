@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import "./App.css";
-import { HomePage } from "./app/pages/HomePage";
-import { Portfolio } from "./app/pages/Portfolio";
-import { Contact } from "./app/pages/Contact";
+import { HomePage } from "./pages/HomePage";
+import { Portfolio } from "./pages/Portfolio";
+import { Contact } from "./pages/Contact";
 
 function App() {
   const { i18n } = useTranslation();

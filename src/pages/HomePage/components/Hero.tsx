@@ -1,7 +1,7 @@
 // import { RiVipDiamondFill } from "react-icons/ri";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { KitchenAndBathImages, FlooringImages, WoodworkingImages, DeckAndPatioImages } from "src/app/utils";
+import { KitchenAndBathImages, FlooringImages, WoodworkingImages, DeckAndPatioImages } from "src/utils";
 
 export function Hero() {
   const images: string[] = [
@@ -55,7 +55,7 @@ export function Hero() {
           </p>
 
           <a
-            href="/contact"
+            href="/Contact"
             className="py-8 w-3/5 bg-white text-maroon w-full font-['Poppins'] text-2xl text-center font-semibold shadow-md rounded-full"
           >
             Get a quote!
@@ -79,7 +79,7 @@ export function Hero() {
                 type="button"
                 className="py-6 px-4 w-1/3 bg-gray-600 hover:bg-gray-800 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
               >
-                <a href="/contact">Get A Quote!</a>
+                <a href="/Contact">Get A Quote!</a>
               </button>
             </div>
           </div>

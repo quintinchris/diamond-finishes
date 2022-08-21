@@ -77,7 +77,7 @@ export function Features() {
         <div className="text-center">
           <a
             className="inline-block font-['Poppins'] px-5 py-3 mt-6 text-md font-medium text-white bg-maroon rounded-lg hover:bg-red-900"
-            href="/portfolio"
+            href="/Portfolio"
           >
             View Our Work
           </a>

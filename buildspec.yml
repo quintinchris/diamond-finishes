@@ -4,8 +4,9 @@ env:
   variables:
     aws-region: us-east-1
   secrets-manager:
-    ACCESS_KEY: "aws/credentials:aws_access_key_id"
-    SECRET_KEY: "aws/credentials:aws_secret_access_key"
+#    ACCESS_KEY: "aws/credentials:aws_access_key_id"
+#    SECRET_KEY: "aws/credentials:aws_secret_access_key"
+    API_ENDPOINT: "aws/${env}/df/api_gw"
 
 phases:
   install:
@@ -18,8 +19,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-
-      # - echo REACT_APP_API_GW=${SOME_API_GW} >> .env
+      - echo REACT_APP_API_ENDPOINT=${API_ENDPOINT} >> .env
       # - npm run test
       - npm run build
 

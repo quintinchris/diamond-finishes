@@ -11,7 +11,7 @@ export function Team() {
       <div className="flex items-center space-y-24 md:space-y-0 flex-col md:flex-row justify-evenly">
         <div className="p-4 relative">
           <div className="text-center mb-4 absolute -top-16 right-1/2 transform translate-x-1/2">
-            <a href="#" className="block relative">
+            <a href="src/pages/HomePage/components/Team#" className="block relative">
               <img
                 alt="profil"
                 src="public/images/blankprofile.png"
@@ -36,7 +36,7 @@ export function Team() {
         </div>
         <div className="p-4 relative">
           <div className="text-center mb-4 absolute -top-16 right-1/2 transform translate-x-1/2">
-            <a href="#" className="block relative">
+            <a href="src/pages/HomePage/components/Team#" className="block relative">
               <img
                 alt="profil"
                 src="public/images/blankprofile.png"

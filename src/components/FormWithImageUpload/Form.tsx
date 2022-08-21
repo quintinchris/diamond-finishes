@@ -2,7 +2,7 @@ import { useState } from "react";
 import {
   sendEmail,
   EmailTemplateParams,
-  useInput,
+  useInput, convertToBase64,
 } from "../../utils";
 import {BsTelephoneFill} from "react-icons/bs";
 import {FaRegEnvelope} from 'react-icons/fa';
@@ -22,13 +22,22 @@ export function FormWithImageUpload() {
   } = useInput("");
   const [selectedFile, setSelectedFile] = useState<any>();
   const [isFilePicked, setIsFilePicked] = useState(false);
+  const [loading, setLoading] = useState(false);
   const images: Array<string> = [];
+
+  const showSuccessMessage = () => {
+    alert("Message Sent!")
+  }
+
+  const showErrorMessage = () => {
+    alert("There was an error sending your message, please try again!")
+  }
 
   const handleImageUpload = async (e: any) => {
     const file = e.target.files[0];
     if (file) {
-      // let base64Image = await convertToBase64(file);
-      images.push(file);
+      let base64Image = await convertToBase64(file);
+      images.push(base64Image);
       setSelectedFile(file);
       setIsFilePicked(true);
     } else {
@@ -37,37 +46,21 @@ export function FormWithImageUpload() {
   }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    setLoading(true);
     e.preventDefault();
-    if (isFilePicked && selectedFile) {
-      // const imageUrl = await getImageForMessage(selectedFile);
-      const paramsWithImage: EmailTemplateParams = {
-        name,
-        contact,
-        message: message,
-      };
-      // sendEmail(paramsWithImage);
-      alert(
-        `Submitting Name ${paramsWithImage.name}, contact ${paramsWithImage.contact}, message ${paramsWithImage.message}`
-      );
+    const result = images?.length > 0 ? await sendEmail(name, message, images) : await sendEmail(name, message)
+
+    if (result === true) {
+      showSuccessMessage();
       resetName();
       resetContact();
       resetMessage();
       setIsFilePicked(false);
     } else {
-      let params: EmailTemplateParams = {
-        name,
-        contact,
-        message,
-      };
-      // sendEmail(params);
-      e.preventDefault();
-      alert(
-        `Submitting Name ${params.name}, contact ${params.contact}, message ${params.message}`
-      );
-      resetName();
-      resetContact();
-      resetMessage();
+      showErrorMessage();
     }
+
+    setLoading(false);
   };
 
   return (
@@ -166,6 +159,7 @@ export function FormWithImageUpload() {
               )}
             </div>
             <div className="mt-8">
+              {/*if (loading) <LoadingIcon /> : ""*/}
               <button
                 type="submit"
                 className="uppercase text-sm font-bold tracking-wide bg-red-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:bg-maroon"

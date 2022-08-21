@@ -10,14 +10,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 md:justify-evenly justify-items-center mx-4">
           <div className="md:justify-self-start">
             <a
-              href="/"
+              href="/src/pages"
               className="text-md tracking-tighter text-white font-['Poppins'] hover:text-gray-300"
             >
               © 2022 Diamond Finishes LLC
             </a>
           </div>
           <div className="hidden md:block md:justify-self-center md:ml-12">
-            <a href="/">
+            <a href="/src/pages">
               <IoDiamondOutline color="white" className="h-7 w-8" />
             </a>
           </div>
