@@ -7,6 +7,8 @@ import {
 import {BsTelephoneFill} from "react-icons/bs";
 import {FaRegEnvelope} from 'react-icons/fa';
 import {MdOutlineUpload} from 'react-icons/md';
+import CircularProgress from '@mui/material/CircularProgress';
+
 
 export function FormWithImageUpload() {
   const { value: name, bind: bindName, reset: resetName } = useInput("");
@@ -159,7 +161,7 @@ export function FormWithImageUpload() {
               )}
             </div>
             <div className="mt-8">
-              {/*if (loading) <LoadingIcon /> : ""*/}
+              { loading ? <CircularProgress /> : ""}
               <button
                 type="submit"
                 className="uppercase text-sm font-bold tracking-wide bg-red-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:bg-maroon"

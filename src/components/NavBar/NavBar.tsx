@@ -17,7 +17,7 @@ export function NavBar() {
         <div className="flex items-center justify-between h-10">
           <div className="w-full justify-between flex items-center">
             <div className="flex flex-shrink-0 justify-between">
-              <a href="/src/pages">
+              <a href="/">
                 <GrDiamond color="black" className="h-7 w-8" />
               </a>
               <span className="hidden md:block pl-2 my-auto text-xl font-['Poppins'] font-semibold text-black">
@@ -28,19 +28,19 @@ export function NavBar() {
               <div className="ml-10 flex items-baseline space-x-4">
                 <a
                   className="text-black  hover:text-gray-500 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  href="/src/pages"
+                  href="/"
                 >
                   Home
                 </a>
                 <a
                   className="text-black  hover:text-gray-500 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  href="/src/pages/Portfolio"
+                  href="/portfolio"
                 >
                   Portfolio
                 </a>
                 <a
                   className="text-black  hover:text-gray-500 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  href="/src/pages/Contact"
+                  href="/contact"
                 >
                   Contact
                 </a>
@@ -70,19 +70,19 @@ export function NavBar() {
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 grid col-auto justify-end text-right">
           <a
             className="text-black hover:text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
-            href="/src/pages"
+            href="/"
           >
             Home
           </a>
           <a
             className="text-black hover:text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
-            href="/src/pages/Portfolio"
+            href="/portfolio"
           >
             Portfolio
           </a>
           <a
             className="text-black hover:text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
-            href="/src/pages/Contact"
+            href="/contact"
           >
             Contact
           </a>

@@ -1,5 +1,5 @@
 import axios from "axios";
-import {Attachment, SendEmailResponse, SendEmailParams} from "./types";
+import {SendEmailResponse, SendEmailParams} from "./types";
 
 export const sendEmail = async (
   name: string,
@@ -17,8 +17,12 @@ export const sendEmail = async (
     });
   }
 
-  const endpoint = process.env.REACT_APP_API_ENDPOINT;
-  const response: SendEmailResponse = await axios.post(endpoint ?? "", data);
+  const headers = {
+    "Content-Type": "application/json",
+  };
+
+  const url = `${process.env.REACT_APP_API_ENDPOINT}/send-email`;
+  const response: SendEmailResponse = await axios.post(url, data, {headers});
 
   return response?.emailSent;
 };
