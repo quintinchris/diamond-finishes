@@ -1,6 +1,7 @@
 import * as codepipeline from "aws-cdk-lib/aws-codepipeline";
 import * as codepipeline_actions from "aws-cdk-lib/aws-codepipeline-actions";
 import { aws_s3, aws_codebuild } from "aws-cdk-lib";
+import * as cdk from "aws-cdk-lib";
 import { Stack, StackProps, RemovalPolicy, SecretValue } from "aws-cdk-lib";
 import { Construct } from "constructs";
 
@@ -20,12 +21,17 @@ export class DiamondFinishesS3Pipeline extends Stack {
       oauthToken: SecretValue.secretsManager("my-github-token"),
       output: sourceOutput,
       branch: "main",
+      trigger: codepipeline_actions.GitHubTrigger.WEBHOOK,
     });
 
     // Run Codebuild
     const project = new codebuild.PipelineProject(
       this,
-      "diamondFinishesCodebuildProject-test"
+      "diamondFinishesCodebuildProject-test",
+      {
+        projectName: "DiamondFinishes",
+        buildSpec: codebuild.BuildSpec.fromSourceFilename("./buildspec.yml"),
+      }
     );
     const buildArtifact = new codepipeline.Artifact();
     const buildAction = new codepipeline_actions.CodeBuildAction({
@@ -42,10 +48,10 @@ export class DiamondFinishesS3Pipeline extends Stack {
 
     // Manual Approvals
     const approvalToStgAction = new codepipeline_actions.ManualApprovalAction({
-      actionName: "Promote To Stg",
+      actionName: "PromoteToStg",
     });
     const approvalToPrdAction = new codepipeline_actions.ManualApprovalAction({
-      actionName: "Promote To Prod",
+      actionName: "PromoteToProd",
     });
 
     // Create Dev and Stg Buckets
@@ -108,26 +114,39 @@ export class DiamondFinishesS3Pipeline extends Stack {
           actions: [buildAction],
         },
         {
-          stageName: "Dev Deployment",
+          stageName: "DevDeployment",
           actions: [deployToDev],
         },
         {
-          stageName: "Promote to Staging",
+          stageName: "PromoteToStg",
           actions: [approvalToStgAction],
         },
         {
-          stageName: "Staging Deployment",
+          stageName: "StgDeployment",
           actions: [deployToStg],
         },
         {
-          stageName: "Promote to Production",
+          stageName: "PromoteToProd",
           actions: [approvalToPrdAction],
         },
         {
-          stageName: "Production Deployment",
+          stageName: "ProductionDeployment",
           actions: [deployToPrd],
         },
       ],
+    });
+
+    new cdk.CfnOutput(this, "DevURL", {
+      value: devBucket.bucketWebsiteUrl,
+      description: "Dev URL",
+    });
+    new cdk.CfnOutput(this, "StgURL", {
+      value: stgBucket.bucketWebsiteUrl,
+      description: "Stg URL",
+    });
+    new cdk.CfnOutput(this, "ProdURL", {
+      value: prdBucket.bucketWebsiteUrl,
+      description: "Prod URL",
     });
   }
 }
